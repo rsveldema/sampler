@@ -1,20 +1,26 @@
 # # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
 # 
 preplace inst nios_sampler.cpu.reset_bridge -pg 1
+preplace inst nios_sampler.sdram -pg 1 -lvl 5 -y 320
 preplace inst nios_sampler.clk_0 -pg 1 -lvl 1 -y 30
+preplace inst nios_sampler.sys_sdram_pll_0.reset_from_locked -pg 1
 preplace inst nios_sampler.jtag_uart_0 -pg 1 -lvl 4 -y 50
 preplace inst nios_sampler.cpu.cpu -pg 1
 preplace inst nios_sampler.cpu_memory -pg 1 -lvl 4 -y 160
 preplace inst nios_sampler.pio_0 -pg 1 -lvl 4 -y 240
 preplace inst nios_sampler.cpu.clock_bridge -pg 1
 preplace inst nios_sampler -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst nios_sampler.sys_sdram_pll_0.sys_pll -pg 1
+preplace inst nios_sampler.sys_sdram_pll_0 -pg 1 -lvl 4 -y 430
 preplace inst nios_sampler.cpu -pg 1 -lvl 3 -y 100
-preplace netloc POINT_TO_POINT<net_container>nios_sampler</net_container>(MASTER)cpu.irq,(SLAVE)jtag_uart_0.irq) 1 3 1 1010
+preplace netloc EXPORT<net_container>nios_sampler</net_container>(SLAVE)nios_sampler.sdram_controller_wire,(SLAVE)sdram.wire) 1 0 5 NJ 390 NJ 390 NJ 390 NJ 390 NJ
 preplace netloc EXPORT<net_container>nios_sampler</net_container>(SLAVE)nios_sampler.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
-preplace netloc INTERCONNECT<net_container>nios_sampler</net_container>(MASTER)cpu.data_master,(MASTER)cpu.instruction_master,(SLAVE)jtag_uart_0.avalon_jtag_slave,(SLAVE)cpu.debug_mem_slave,(SLAVE)pio_0.s1,(SLAVE)cpu_memory.s1) 1 2 2 460 40 990
-preplace netloc FAN_OUT<net_container>nios_sampler</net_container>(MASTER)cpu.debug_reset_request,(SLAVE)pio_0.reset,(SLAVE)cpu_memory.reset1,(SLAVE)jtag_uart_0.reset,(SLAVE)cpu.reset) 1 2 2 460 240 1030
-preplace netloc FAN_OUT<net_container>nios_sampler</net_container>(SLAVE)jtag_uart_0.clk,(SLAVE)cpu.clk,(SLAVE)pio_0.clk,(MASTER)clk_0.clk,(SLAVE)cpu_memory.clk1) 1 1 3 NJ 40 440 60 970
-preplace netloc EXPORT<net_container>nios_sampler</net_container>(SLAVE)pio_0.external_connection,(SLAVE)nios_sampler.leds) 1 0 4 NJ 270 NJ 270 NJ 270 NJ
+preplace netloc EXPORT<net_container>nios_sampler</net_container>(SLAVE)nios_sampler.leds,(SLAVE)pio_0.external_connection) 1 0 4 NJ 280 NJ 280 NJ 280 NJ
+preplace netloc FAN_OUT<net_container>nios_sampler</net_container>(SLAVE)pio_0.clk,(SLAVE)sys_sdram_pll_0.ref_clk,(SLAVE)cpu_memory.clk1,(SLAVE)cpu.clk,(MASTER)clk_0.clk,(SLAVE)jtag_uart_0.clk) 1 1 3 N 40 530 60 1080
+preplace netloc FAN_OUT<net_container>nios_sampler</net_container>(SLAVE)cpu.reset,(SLAVE)pio_0.reset,(MASTER)cpu.debug_reset_request,(SLAVE)sys_sdram_pll_0.ref_reset,(SLAVE)jtag_uart_0.reset,(SLAVE)cpu_memory.reset1,(SLAVE)sdram.reset) 1 2 3 550 240 1140 350 N
+preplace netloc INTERCONNECT<net_container>nios_sampler</net_container>(SLAVE)jtag_uart_0.avalon_jtag_slave,(MASTER)cpu.instruction_master,(MASTER)cpu.data_master,(SLAVE)cpu.debug_mem_slave,(SLAVE)pio_0.s1,(SLAVE)sdram.s1,(SLAVE)cpu_memory.s1) 1 2 3 530 260 1100 370 N
+preplace netloc POINT_TO_POINT<net_container>nios_sampler</net_container>(SLAVE)jtag_uart_0.irq,(MASTER)cpu.irq) 1 3 1 1060
 preplace netloc EXPORT<net_container>nios_sampler</net_container>(SLAVE)nios_sampler.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
-levelinfo -pg 1 0 50 1220
-levelinfo -hier nios_sampler 60 90 420 730 1060 1210
+preplace netloc POINT_TO_POINT<net_container>nios_sampler</net_container>(MASTER)sys_sdram_pll_0.sdram_clk,(SLAVE)sdram.clk) 1 4 1 1380
+levelinfo -pg 1 0 140 1500
+levelinfo -hier nios_sampler 150 180 510 820 1220 1410 1490

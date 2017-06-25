@@ -4,15 +4,25 @@
 
 `timescale 1 ps / 1 ps
 module nios_sampler (
-		input  wire       clk_clk,       //   clk.clk
-		output wire [7:0] leds_export,   //  leds.export
-		input  wire       reset_reset_n  // reset.reset_n
+		input  wire        clk_clk,                     //                   clk.clk
+		output wire [7:0]  leds_export,                 //                  leds.export
+		input  wire        reset_reset_n,               //                 reset.reset_n
+		output wire        sdram_clk_clk,               //             sdram_clk.clk
+		output wire [12:0] sdram_controller_wire_addr,  // sdram_controller_wire.addr
+		output wire [1:0]  sdram_controller_wire_ba,    //                      .ba
+		output wire        sdram_controller_wire_cas_n, //                      .cas_n
+		output wire        sdram_controller_wire_cke,   //                      .cke
+		output wire        sdram_controller_wire_cs_n,  //                      .cs_n
+		inout  wire [15:0] sdram_controller_wire_dq,    //                      .dq
+		output wire [1:0]  sdram_controller_wire_dqm,   //                      .dqm
+		output wire        sdram_controller_wire_ras_n, //                      .ras_n
+		output wire        sdram_controller_wire_we_n   //                      .we_n
 	);
 
 	wire  [31:0] cpu_data_master_readdata;                                    // mm_interconnect_0:cpu_data_master_readdata -> cpu:d_readdata
 	wire         cpu_data_master_waitrequest;                                 // mm_interconnect_0:cpu_data_master_waitrequest -> cpu:d_waitrequest
 	wire         cpu_data_master_debugaccess;                                 // cpu:debug_mem_slave_debugaccess_to_roms -> mm_interconnect_0:cpu_data_master_debugaccess
-	wire  [14:0] cpu_data_master_address;                                     // cpu:d_address -> mm_interconnect_0:cpu_data_master_address
+	wire  [25:0] cpu_data_master_address;                                     // cpu:d_address -> mm_interconnect_0:cpu_data_master_address
 	wire   [3:0] cpu_data_master_byteenable;                                  // cpu:d_byteenable -> mm_interconnect_0:cpu_data_master_byteenable
 	wire         cpu_data_master_read;                                        // cpu:d_read -> mm_interconnect_0:cpu_data_master_read
 	wire         cpu_data_master_write;                                       // cpu:d_write -> mm_interconnect_0:cpu_data_master_write
@@ -48,9 +58,18 @@ module nios_sampler (
 	wire   [1:0] mm_interconnect_0_pio_0_s1_address;                          // mm_interconnect_0:pio_0_s1_address -> pio_0:address
 	wire         mm_interconnect_0_pio_0_s1_write;                            // mm_interconnect_0:pio_0_s1_write -> pio_0:write_n
 	wire  [31:0] mm_interconnect_0_pio_0_s1_writedata;                        // mm_interconnect_0:pio_0_s1_writedata -> pio_0:writedata
+	wire         mm_interconnect_0_sdram_s1_chipselect;                       // mm_interconnect_0:sdram_s1_chipselect -> sdram:az_cs
+	wire  [15:0] mm_interconnect_0_sdram_s1_readdata;                         // sdram:za_data -> mm_interconnect_0:sdram_s1_readdata
+	wire         mm_interconnect_0_sdram_s1_waitrequest;                      // sdram:za_waitrequest -> mm_interconnect_0:sdram_s1_waitrequest
+	wire  [23:0] mm_interconnect_0_sdram_s1_address;                          // mm_interconnect_0:sdram_s1_address -> sdram:az_addr
+	wire         mm_interconnect_0_sdram_s1_read;                             // mm_interconnect_0:sdram_s1_read -> sdram:az_rd_n
+	wire   [1:0] mm_interconnect_0_sdram_s1_byteenable;                       // mm_interconnect_0:sdram_s1_byteenable -> sdram:az_be_n
+	wire         mm_interconnect_0_sdram_s1_readdatavalid;                    // sdram:za_valid -> mm_interconnect_0:sdram_s1_readdatavalid
+	wire         mm_interconnect_0_sdram_s1_write;                            // mm_interconnect_0:sdram_s1_write -> sdram:az_wr_n
+	wire  [15:0] mm_interconnect_0_sdram_s1_writedata;                        // mm_interconnect_0:sdram_s1_writedata -> sdram:az_data
 	wire         irq_mapper_receiver0_irq;                                    // jtag_uart_0:av_irq -> irq_mapper:receiver0_irq
 	wire  [31:0] cpu_irq_irq;                                                 // irq_mapper:sender_irq -> cpu:irq
-	wire         rst_controller_reset_out_reset;                              // rst_controller:reset_out -> [cpu:reset_n, cpu_memory:reset, irq_mapper:reset, jtag_uart_0:rst_n, mm_interconnect_0:cpu_reset_reset_bridge_in_reset_reset, pio_0:reset_n, rst_translator:in_reset]
+	wire         rst_controller_reset_out_reset;                              // rst_controller:reset_out -> [cpu:reset_n, cpu_memory:reset, irq_mapper:reset, jtag_uart_0:rst_n, mm_interconnect_0:cpu_reset_reset_bridge_in_reset_reset, pio_0:reset_n, rst_translator:in_reset, sdram:reset_n, sys_sdram_pll_0:ref_reset_reset]
 	wire         rst_controller_reset_out_reset_req;                          // rst_controller:reset_req -> [cpu:reset_req, cpu_memory:reset_req, rst_translator:reset_req_in]
 	wire         cpu_debug_reset_request_reset;                               // cpu:debug_reset_request -> rst_controller:reset_in0
 
@@ -121,6 +140,37 @@ module nios_sampler (
 		.out_port   (leds_export)                            // external_connection.export
 	);
 
+	nios_sampler_sdram sdram (
+		.clk            (clk_clk),                                  //   clk.clk
+		.reset_n        (~rst_controller_reset_out_reset),          // reset.reset_n
+		.az_addr        (mm_interconnect_0_sdram_s1_address),       //    s1.address
+		.az_be_n        (~mm_interconnect_0_sdram_s1_byteenable),   //      .byteenable_n
+		.az_cs          (mm_interconnect_0_sdram_s1_chipselect),    //      .chipselect
+		.az_data        (mm_interconnect_0_sdram_s1_writedata),     //      .writedata
+		.az_rd_n        (~mm_interconnect_0_sdram_s1_read),         //      .read_n
+		.az_wr_n        (~mm_interconnect_0_sdram_s1_write),        //      .write_n
+		.za_data        (mm_interconnect_0_sdram_s1_readdata),      //      .readdata
+		.za_valid       (mm_interconnect_0_sdram_s1_readdatavalid), //      .readdatavalid
+		.za_waitrequest (mm_interconnect_0_sdram_s1_waitrequest),   //      .waitrequest
+		.zs_addr        (sdram_controller_wire_addr),               //  wire.export
+		.zs_ba          (sdram_controller_wire_ba),                 //      .export
+		.zs_cas_n       (sdram_controller_wire_cas_n),              //      .export
+		.zs_cke         (sdram_controller_wire_cke),                //      .export
+		.zs_cs_n        (sdram_controller_wire_cs_n),               //      .export
+		.zs_dq          (sdram_controller_wire_dq),                 //      .export
+		.zs_dqm         (sdram_controller_wire_dqm),                //      .export
+		.zs_ras_n       (sdram_controller_wire_ras_n),              //      .export
+		.zs_we_n        (sdram_controller_wire_we_n)                //      .export
+	);
+
+	nios_sampler_sys_sdram_pll_0 sys_sdram_pll_0 (
+		.ref_clk_clk        (clk_clk),                        //      ref_clk.clk
+		.ref_reset_reset    (rst_controller_reset_out_reset), //    ref_reset.reset
+		.sys_clk_clk        (),                               //      sys_clk.clk
+		.sdram_clk_clk      (sdram_clk_clk),                  //    sdram_clk.clk
+		.reset_source_reset ()                                // reset_source.reset
+	);
+
 	nios_sampler_mm_interconnect_0 mm_interconnect_0 (
 		.clk_0_clk_clk                             (clk_clk),                                                     //                       clk_0_clk.clk
 		.cpu_reset_reset_bridge_in_reset_reset     (rst_controller_reset_out_reset),                              // cpu_reset_reset_bridge_in_reset.reset
@@ -162,7 +212,16 @@ module nios_sampler (
 		.pio_0_s1_write                            (mm_interconnect_0_pio_0_s1_write),                            //                                .write
 		.pio_0_s1_readdata                         (mm_interconnect_0_pio_0_s1_readdata),                         //                                .readdata
 		.pio_0_s1_writedata                        (mm_interconnect_0_pio_0_s1_writedata),                        //                                .writedata
-		.pio_0_s1_chipselect                       (mm_interconnect_0_pio_0_s1_chipselect)                        //                                .chipselect
+		.pio_0_s1_chipselect                       (mm_interconnect_0_pio_0_s1_chipselect),                       //                                .chipselect
+		.sdram_s1_address                          (mm_interconnect_0_sdram_s1_address),                          //                        sdram_s1.address
+		.sdram_s1_write                            (mm_interconnect_0_sdram_s1_write),                            //                                .write
+		.sdram_s1_read                             (mm_interconnect_0_sdram_s1_read),                             //                                .read
+		.sdram_s1_readdata                         (mm_interconnect_0_sdram_s1_readdata),                         //                                .readdata
+		.sdram_s1_writedata                        (mm_interconnect_0_sdram_s1_writedata),                        //                                .writedata
+		.sdram_s1_byteenable                       (mm_interconnect_0_sdram_s1_byteenable),                       //                                .byteenable
+		.sdram_s1_readdatavalid                    (mm_interconnect_0_sdram_s1_readdatavalid),                    //                                .readdatavalid
+		.sdram_s1_waitrequest                      (mm_interconnect_0_sdram_s1_waitrequest),                      //                                .waitrequest
+		.sdram_s1_chipselect                       (mm_interconnect_0_sdram_s1_chipselect)                        //                                .chipselect
 	);
 
 	nios_sampler_irq_mapper irq_mapper (

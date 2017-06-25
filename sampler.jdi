@@ -1,6 +1,6 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="b3eb51857693e06d367c"/>
+    <hash md5_digest_80b="47cb0d409eab4880f585"/>
   </project>
   <file_info>
     <file device="EP4CE22F17C6" path="sampler.sof" usercode="0xFFFFFFFF"/>
@@ -99,8 +99,8 @@
     </sld_info>
     <sld_info hpath="nios_sampler:nioscore" name="nioscore">
       <assignment_values>
-        <assignment_value text="QSYS_NAME nios_sampler HAS_SOPCINFO 1 GENERATION_ID 1498391309"/>
-        <assignment_value text="QSYS_NAME nios_sampler HAS_SOPCINFO 1 GENERATION_ID 1498391384"/>
+        <assignment_value text="QSYS_NAME nios_sampler HAS_SOPCINFO 1 GENERATION_ID 1498411703"/>
+        <assignment_value text="QSYS_NAME nios_sampler HAS_SOPCINFO 1 GENERATION_ID 1498411751"/>
       </assignment_values>
       <parameters/>
     </sld_info>

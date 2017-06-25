@@ -3,7 +3,7 @@
 # Machine generated for CPU 'cpu' in SOPC Builder design 'nios_sampler'
 # SOPC Builder design path: ../../nios_sampler.sopcinfo
 #
-# Generated: Sun Jun 25 13:51:38 CEST 2017
+# Generated: Sun Jun 25 19:32:52 CEST 2017
 
 # DO NOT MODIFY THIS FILE
 #
@@ -48,3 +48,6 @@
 
 # cpu_memory
 memory 0x0 0x4000 cache
+
+# sdram
+memory 0x2000000 0x4000000 cache

@@ -31,47 +31,49 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC, SMALL_DATA
   6 .cpu_memory   00000000  000002a0  000002a0  0000128c  2**0
                   CONTENTS
-  7 .comment      00000023  00000000  00000000  0000128c  2**0
+  7 .sdram        00000000  02000000  02000000  0000128c  2**0
+                  CONTENTS
+  8 .comment      00000023  00000000  00000000  0000128c  2**0
                   CONTENTS, READONLY
-  8 .debug_aranges 00000168  00000000  00000000  000012b0  2**3
+  9 .debug_aranges 00000168  00000000  00000000  000012b0  2**3
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_info   00000b70  00000000  00000000  00001418  2**0
+ 10 .debug_info   00000b70  00000000  00000000  00001418  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_abbrev 0000069b  00000000  00000000  00001f88  2**0
+ 11 .debug_abbrev 0000069b  00000000  00000000  00001f88  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_line   000007e8  00000000  00000000  00002623  2**0
+ 12 .debug_line   000007e8  00000000  00000000  00002623  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_frame  00000190  00000000  00000000  00002e0c  2**2
+ 13 .debug_frame  00000190  00000000  00000000  00002e0c  2**2
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_str    00000584  00000000  00000000  00002f9c  2**0
+ 14 .debug_str    00000584  00000000  00000000  00002f9c  2**0
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_loc    0000016d  00000000  00000000  00003520  2**0
+ 15 .debug_loc    0000016d  00000000  00000000  00003520  2**0
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_alt_sim_info 00000010  00000000  00000000  00003690  2**2
+ 16 .debug_alt_sim_info 00000010  00000000  00000000  00003690  2**2
                   CONTENTS, READONLY, DEBUGGING
- 16 .debug_ranges 00000088  00000000  00000000  000036a0  2**3
+ 17 .debug_ranges 00000088  00000000  00000000  000036a0  2**3
                   CONTENTS, READONLY, DEBUGGING
- 17 .thread_model 00000003  00000000  00000000  000044a6  2**0
+ 18 .thread_model 00000003  00000000  00000000  00004506  2**0
                   CONTENTS, READONLY
- 18 .cpu          00000003  00000000  00000000  000044a9  2**0
+ 19 .cpu          00000003  00000000  00000000  00004509  2**0
                   CONTENTS, READONLY
- 19 .qsys         00000001  00000000  00000000  000044ac  2**0
+ 20 .qsys         00000001  00000000  00000000  0000450c  2**0
                   CONTENTS, READONLY
- 20 .simulation_enabled 00000001  00000000  00000000  000044ad  2**0
+ 21 .simulation_enabled 00000001  00000000  00000000  0000450d  2**0
                   CONTENTS, READONLY
- 21 .stderr_dev   0000000b  00000000  00000000  000044ae  2**0
+ 22 .stderr_dev   0000000b  00000000  00000000  0000450e  2**0
                   CONTENTS, READONLY
- 22 .stdin_dev    0000000b  00000000  00000000  000044b9  2**0
+ 23 .stdin_dev    0000000b  00000000  00000000  00004519  2**0
                   CONTENTS, READONLY
- 23 .stdout_dev   0000000b  00000000  00000000  000044c4  2**0
+ 24 .stdout_dev   0000000b  00000000  00000000  00004524  2**0
                   CONTENTS, READONLY
- 24 .sopc_system_name 0000000c  00000000  00000000  000044cf  2**0
+ 25 .sopc_system_name 0000000c  00000000  00000000  0000452f  2**0
                   CONTENTS, READONLY
- 25 .quartus_project_dir 0000000a  00000000  00000000  000044db  2**0
+ 26 .quartus_project_dir 0000000a  00000000  00000000  0000453b  2**0
                   CONTENTS, READONLY
- 26 .jdi          00003c7a  00000000  00000000  000044e5  2**0
+ 27 .jdi          00003c7a  00000000  00000000  00004545  2**0
                   CONTENTS, READONLY
- 27 .sopcinfo     000325c5  00000000  00000000  0000815f  2**0
+ 28 .sopcinfo     0003cb7d  00000000  00000000  000081bf  2**0
                   CONTENTS, READONLY
 SYMBOL TABLE:
 00000000 l    d  .entry	00000000 .entry
@@ -81,6 +83,7 @@ SYMBOL TABLE:
 00000288 l    d  .rwdata	00000000 .rwdata
 00000290 l    d  .bss	00000000 .bss
 000002a0 l    d  .cpu_memory	00000000 .cpu_memory
+02000000 l    d  .sdram	00000000 .sdram
 00000000 l    d  .comment	00000000 .comment
 00000000 l    d  .debug_aranges	00000000 .debug_aranges
 00000000 l    d  .debug_info	00000000 .debug_info
@@ -137,6 +140,7 @@ SYMBOL TABLE:
 000002a0 g       *ABS*	00000000 _end
 00000020 g       *ABS*	00000000 __ram_exceptions_end
 00004000 g       *ABS*	00000000 __alt_data_end
+02000000 g       *ABS*	00000000 __alt_mem_sdram
 0000000c g       .entry	00000000 _exit
 00000254 g     F .text	0000001c strlen
 00000248 g     F .text	00000004 alt_icache_flush_all
@@ -202,7 +206,7 @@ Disassembly of section .text:
     addi r2, r2, 4
   48:	10800104 	addi	r2,r2,4
     bltu r2, r3, 0b
-  4c:	10fffd36 	bltu	r2,r3,44 <_gp+0xffff7dbc>
+  4c:	10fffd36 	bltu	r2,r3,44 <__alt_mem_sdram+0xfe000044>
      * section aren't defined until alt_load() has been called).
      */
     mov   et, zero
@@ -223,7 +227,7 @@ Disassembly of section .text:
     /* Wait in infinite loop in case alt_main does return. */
 alt_after_alt_main:
     br alt_after_alt_main
-  58:	003fff06 	br	58 <_gp+0xffff7dd0>
+  58:	003fff06 	br	58 <__alt_mem_sdram+0xfe000058>
 
 0000005c <main>:
 
@@ -285,7 +289,7 @@ int main()
 
 	  for (int i=0;i<100;i++) {
 		  for (int j=0;j<100;j++) {
-  98:	103ffb1e 	bne	r2,zero,88 <_gp+0xffff7e00>
+  98:	103ffb1e 	bne	r2,zero,88 <__alt_mem_sdram+0xfe000088>
   9c:	18ffffc4 	addi	r3,r3,-1
   /* Event loop never exits. */
   while (1)
@@ -293,8 +297,8 @@ int main()
 	  *leds = *leds + 1;
 
 	  for (int i=0;i<100;i++) {
-  a0:	183ff81e 	bne	r3,zero,84 <_gp+0xffff7dfc>
-  a4:	003ff306 	br	74 <_gp+0xffff7dec>
+  a0:	183ff81e 	bne	r3,zero,84 <__alt_mem_sdram+0xfe000084>
+  a4:	003ff306 	br	74 <__alt_mem_sdram+0xfe000074>
 
 000000a8 <alt_load>:
  * there is no bootloader, so this application is responsible for loading to
@@ -328,7 +332,7 @@ static void ALT_INLINE alt_load_section (alt_u32* from,
   e8:	0005883a 	mov	r2,zero
   {
     while( to != end )
-  ec:	10fff526 	beq	r2,r3,c4 <_gp+0xffff7e3c>
+  ec:	10fff526 	beq	r2,r3,c4 <__alt_mem_sdram+0xfe0000c4>
     {
       *to++ = *from++;
   f0:	114f883a 	add	r7,r2,r5
@@ -336,7 +340,7 @@ static void ALT_INLINE alt_load_section (alt_u32* from,
   f8:	110d883a 	add	r6,r2,r4
   fc:	10800104 	addi	r2,r2,4
  100:	31c00015 	stw	r7,0(r6)
- 104:	003ff906 	br	ec <_gp+0xffff7e64>
+ 104:	003ff906 	br	ec <__alt_mem_sdram+0xfe0000ec>
  108:	01000034 	movhi	r4,0
  10c:	01400034 	movhi	r5,0
  110:	21009c04 	addi	r4,r4,624
@@ -355,7 +359,7 @@ static void ALT_INLINE alt_load_section (alt_u32* from,
  12c:	0005883a 	mov	r2,zero
   {
     while( to != end )
- 130:	10fff526 	beq	r2,r3,108 <_gp+0xffff7e80>
+ 130:	10fff526 	beq	r2,r3,108 <__alt_mem_sdram+0xfe000108>
     {
       *to++ = *from++;
  134:	114f883a 	add	r7,r2,r5
@@ -363,7 +367,7 @@ static void ALT_INLINE alt_load_section (alt_u32* from,
  13c:	110d883a 	add	r6,r2,r4
  140:	10800104 	addi	r2,r2,4
  144:	31c00015 	stw	r7,0(r6)
- 148:	003ff906 	br	130 <_gp+0xffff7ea8>
+ 148:	003ff906 	br	130 <__alt_mem_sdram+0xfe000130>
   
   /*
    * Now ensure that the caches are in synch.
@@ -394,7 +398,7 @@ static void ALT_INLINE alt_load_section (alt_u32* from,
  168:	0005883a 	mov	r2,zero
   {
     while( to != end )
- 16c:	18bff726 	beq	r3,r2,14c <_gp+0xffff7ec4>
+ 16c:	18bff726 	beq	r3,r2,14c <__alt_mem_sdram+0xfe00014c>
     {
       *to++ = *from++;
  170:	114f883a 	add	r7,r2,r5
@@ -402,7 +406,7 @@ static void ALT_INLINE alt_load_section (alt_u32* from,
  178:	110d883a 	add	r6,r2,r4
  17c:	10800104 	addi	r2,r2,4
  180:	31c00015 	stw	r7,0(r6)
- 184:	003ff906 	br	16c <_gp+0xffff7ee4>
+ 184:	003ff906 	br	16c <__alt_mem_sdram+0xfe00016c>
 
 00000188 <alt_main>:
  * devices/filesystems/components in the system; and call the entry point for
@@ -571,12 +575,12 @@ int altera_avalon_jtag_uart_write(altera_avalon_jtag_uart_state* sp,
     if ((IORD_ALTERA_AVALON_JTAG_UART_CONTROL(base) & ALTERA_AVALON_JTAG_UART_CONTROL_WSPACE_MSK) != 0)
  224:	38c00037 	ldwio	r3,0(r7)
  228:	18ffffec 	andhi	r3,r3,65535
- 22c:	183ffc26 	beq	r3,zero,220 <_gp+0xffff7f98>
+ 22c:	183ffc26 	beq	r3,zero,220 <__alt_mem_sdram+0xfe000220>
       IOWR_ALTERA_AVALON_JTAG_UART_DATA(base, *ptr++);
  230:	28c00007 	ldb	r3,0(r5)
  234:	20c00035 	stwio	r3,0(r4)
  238:	29400044 	addi	r5,r5,1
- 23c:	003ff806 	br	220 <_gp+0xffff7f98>
+ 23c:	003ff806 	br	220 <__alt_mem_sdram+0xfe000220>
 
   return count;
 }
@@ -615,6 +619,6 @@ void altera_nios2_gen2_irq_init(void)
  258:	10c00007 	ldb	r3,0(r2)
  25c:	18000226 	beq	r3,zero,268 <strlen+0x14>
  260:	10800044 	addi	r2,r2,1
- 264:	003ffc06 	br	258 <_gp+0xffff7fd0>
+ 264:	003ffc06 	br	258 <__alt_mem_sdram+0xfe000258>
  268:	1105c83a 	sub	r2,r2,r4
  26c:	f800283a 	ret

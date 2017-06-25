@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'nios_sampler'
  * SOPC Builder design path: ../../nios_sampler.sopcinfo
  *
- * Generated: Sun Jun 25 13:51:38 CEST 2017
+ * Generated: Sun Jun 25 19:32:52 CEST 2017
  */
 
 /*
@@ -52,10 +52,12 @@ MEMORY
 {
     reset : ORIGIN = 0x0, LENGTH = 32
     cpu_memory : ORIGIN = 0x20, LENGTH = 16352
+    sdram : ORIGIN = 0x2000000, LENGTH = 33554432
 }
 
 /* Define symbols for each memory base-address */
 __alt_mem_cpu_memory = 0x0;
+__alt_mem_sdram = 0x2000000;
 
 OUTPUT_FORMAT( "elf32-littlenios2",
                "elf32-littlenios2",
@@ -319,6 +321,23 @@ SECTIONS
     } > cpu_memory
 
     PROVIDE (_alt_partition_cpu_memory_load_addr = LOADADDR(.cpu_memory));
+
+    /*
+     *
+     * This section's LMA is set to the .text region.
+     * crt0 will copy to this section's specified mapped region virtual memory address (VMA)
+     *
+     */
+
+    .sdram : AT ( LOADADDR (.cpu_memory) + SIZEOF (.cpu_memory) )
+    {
+        PROVIDE (_alt_partition_sdram_start = ABSOLUTE(.));
+        *(.sdram .sdram. sdram.*)
+        . = ALIGN(4);
+        PROVIDE (_alt_partition_sdram_end = ABSOLUTE(.));
+    } > sdram
+
+    PROVIDE (_alt_partition_sdram_load_addr = LOADADDR(.sdram));
 
     /*
      * Stabs debugging sections.

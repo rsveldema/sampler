@@ -29,6 +29,7 @@ Memory Configuration
 Name             Origin             Length             Attributes
 reset            0x0000000000000000 0x0000000000000020
 cpu_memory       0x0000000000000020 0x0000000000003fe0
+sdram            0x0000000002000000 0x0000000002000000
 *default*        0x0000000000000000 0xffffffffffffffff
 
 Linker script and memory map
@@ -46,6 +47,7 @@ LOAD f:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nio
 END GROUP
 LOAD f:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a
                 0x0000000000000000                __alt_mem_cpu_memory = 0x0
+                0x0000000002000000                __alt_mem_sdram = 0x2000000
 
 .entry          0x0000000000000000       0x20
  *(.entry)
@@ -266,6 +268,13 @@ LOAD f:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nio
                 0x00000000000002a0                end = ABSOLUTE (.)
                 0x00000000000002a0                __alt_stack_base = ABSOLUTE (.)
                 [!provide]                        PROVIDE (_alt_partition_cpu_memory_load_addr, LOADADDR (.cpu_memory))
+
+.sdram          0x0000000002000000        0x0 load address 0x00000000000002a0
+                [!provide]                        PROVIDE (_alt_partition_sdram_start, ABSOLUTE (.))
+ *(.sdram .sdram. sdram.*)
+                0x0000000002000000                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (_alt_partition_sdram_end, ABSOLUTE (.))
+                [!provide]                        PROVIDE (_alt_partition_sdram_load_addr, LOADADDR (.sdram))
 
 .stab
  *(.stab)

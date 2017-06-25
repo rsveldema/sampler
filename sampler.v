@@ -77,7 +77,19 @@ module sampler(
 nios_sampler nioscore( 
 		.clk_clk(CLOCK_50), 
 		.leds_export(LED),
-		.reset_reset_n(SW[0])
+		.reset_reset_n(SW[0]),
+				
+		.sdram_clk_clk(DRAM_CLK),               //             sdram_clk.clk
+		
+		 .sdram_controller_wire_addr(DRAM_ADDR),  // sdram_controller_wire.addr
+		 .sdram_controller_wire_ba(DRAM_BA),    //                      .ba
+		 .sdram_controller_wire_cas_n(DRAM_CAS_N), //                      .cas_n
+		 .sdram_controller_wire_cke(DRAM_CKE),   //                      .cke
+		 .sdram_controller_wire_cs_n(DRAM_CS_N),  //                      .cs_n
+		 .sdram_controller_wire_dq(DRAM_DQ),    //                      .dq
+		 .sdram_controller_wire_dqm(DRAM_DQM),   //                      .dqm
+		 .sdram_controller_wire_ras_n(DRAM_RAS_N), //                      .ras_n
+		 .sdram_controller_wire_we_n(DRAM_WE_N)   //                      .we_n
 		);
 
 endmodule

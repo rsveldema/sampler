@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'nios_sampler'
  * SOPC Builder design path: ../../nios_sampler.sopcinfo
  *
- * Generated: Sun Jun 25 13:51:38 CEST 2017
+ * Generated: Sun Jun 25 19:32:52 CEST 2017
  */
 
 /*
@@ -69,6 +69,8 @@
 #define CPU_MEMORY_REGION_SPAN 16352
 #define RESET_REGION_BASE 0x0
 #define RESET_REGION_SPAN 32
+#define SDRAM_REGION_BASE 0x2000000
+#define SDRAM_REGION_SPAN 33554432
 
 
 /*
