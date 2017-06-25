@@ -76,6 +76,7 @@ module sampler(
 
 nios_sampler nioscore( 
 		.clk_clk(CLOCK_50), 
+		.leds_export(LED),
 		.reset_reset_n(SW[0])
 		);
 

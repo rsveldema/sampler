@@ -1,5 +1,5 @@
 Flow report for sampler
-Thu Jun 15 21:03:20 2017
+Sun Jun 25 13:51:07 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -41,20 +41,20 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Jun 15 21:03:15 2017       ;
+; Flow Status                        ; Successful - Sun Jun 25 13:51:01 2017       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; sampler                                     ;
 ; Top-level Entity Name              ; sampler                                     ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE22F17C6                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 1,606 / 22,320 ( 7 % )                      ;
-;     Total combinational functions  ; 1,508 / 22,320 ( 7 % )                      ;
-;     Dedicated logic registers      ; 871 / 22,320 ( 4 % )                        ;
-; Total registers                    ; 871                                         ;
+; Total logic elements               ; 1,654 / 22,320 ( 7 % )                      ;
+;     Total combinational functions  ; 1,541 / 22,320 ( 7 % )                      ;
+;     Dedicated logic registers      ; 893 / 22,320 ( 4 % )                        ;
+; Total registers                    ; 893                                         ;
 ; Total pins                         ; 154 / 154 ( 100 % )                         ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 44,032 / 608,256 ( 7 % )                    ;
+; Total memory bits                  ; 142,336 / 608,256 ( 23 % )                  ;
 ; Embedded Multiplier 9-bit elements ; 0 / 132 ( 0 % )                             ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
 +------------------------------------+---------------------------------------------+
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/15/2017 21:01:42 ;
+; Start date & time ; 06/25/2017 13:49:19 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; sampler             ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ agreement for further details.
 +-------------------------------------+----------------------------------------------------------------+---------------+--------------+------------+
 ; Assignment Name                     ; Value                                                          ; Default Value ; Entity Name  ; Section Id ;
 +-------------------------------------+----------------------------------------------------------------+---------------+--------------+------------+
-; COMPILER_SIGNATURE_ID               ; 101318454153149.149755330107996                                ; --            ; --           ; --         ;
+; COMPILER_SIGNATURE_ID               ; 101318454153149.149839135909556                                ; --            ; --           ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                             ; --            ; --           ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                              ; --            ; --           ; --         ;
 ; MISC_FILE                           ; nios_sampler/synthesis/../nios_sampler.cmp                     ; --            ; --           ; --         ;
@@ -88,7 +88,7 @@ agreement for further details.
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                          ; --            ; --           ; --         ;
 ; SLD_FILE                            ; nios_sampler/synthesis/nios_sampler.regmap                     ; --            ; --           ; --         ;
 ; SLD_FILE                            ; nios_sampler/synthesis/nios_sampler.debuginfo                  ; --            ; --           ; --         ;
-; SLD_INFO                            ; QSYS_NAME nios_sampler HAS_SOPCINFO 1 GENERATION_ID 1497553058 ; --            ; nios_sampler ; --         ;
+; SLD_INFO                            ; QSYS_NAME nios_sampler HAS_SOPCINFO 1 GENERATION_ID 1498391309 ; --            ; nios_sampler ; --         ;
 ; SOPCINFO_FILE                       ; nios_sampler/synthesis/../../nios_sampler.sopcinfo             ; --            ; --           ; --         ;
 ; SYNTHESIS_ONLY_QIP                  ; On                                                             ; --            ; --           ; --         ;
 +-------------------------------------+----------------------------------------------------------------+---------------+--------------+------------+
@@ -99,11 +99,11 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:01:12     ; 1.0                     ; 764 MB              ; 00:02:52                           ;
-; Fitter                    ; 00:00:14     ; 1.1                     ; 1450 MB             ; 00:00:19                           ;
-; Assembler                 ; 00:00:03     ; 1.0                     ; 570 MB              ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:04     ; 1.2                     ; 695 MB              ; 00:00:04                           ;
-; Total                     ; 00:01:33     ; --                      ; --                  ; 00:03:17                           ;
+; Analysis & Synthesis      ; 00:01:20     ; 1.0                     ; 773 MB              ; 00:03:04                           ;
+; Fitter                    ; 00:00:15     ; 1.1                     ; 1453 MB             ; 00:00:18                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 573 MB              ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:05     ; 1.2                     ; 695 MB              ; 00:00:05                           ;
+; Total                     ; 00:01:43     ; --                      ; --                  ; 00:03:29                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

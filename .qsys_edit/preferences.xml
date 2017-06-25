@@ -3,11 +3,11 @@
  <debug showDebugMenu="0" />
  <systemtable filter="All Interfaces">
   <columns>
-   <connections preferredWidth="127" />
+   <connections preferredWidth="143" />
    <irq preferredWidth="34" />
   </columns>
  </systemtable>
  <library
-   expandedCategories="Library/Interface Protocols/SerialLite,Project,Library/Low Power,Library/Interface Protocols/Serial,Library,Library/Memory Interfaces and Controllers,Library/Interface Protocols,Library/Qsys Interconnect" />
- <window width="1936" height="1096" x="-8" y="-8" />
+   expandedCategories="Library/Processors and Peripherals,Library/Memory Interfaces and Controllers/SDRAM,Library,Library/Memory Interfaces and Controllers,Project" />
+ <window width="1920" height="1087" x="-8" y="-8" />
 </preferences>
