@@ -84,11 +84,44 @@
 
 volatile int tmp;
 
+#define MAGIC 0x12340000
+
+#define SIZE 16
+
+
+typedef struct TestData
+{
+	int data[SIZE];
+} TestData;
+
+void write_sdram(int8_t *sdram_base) {
+	TestData *data = (TestData*)sdram_base;
+	for (int i=0;i<SIZE;i++) {
+		data->data[i] = i + MAGIC;
+	}
+}
+
+void read_sdram(int8_t *sdram_base) {
+	volatile TestData *data = (TestData*)sdram_base;
+	for (int i=0;i<SIZE;i++) {
+		if (data->data[i] != (i + MAGIC)) {
+			  alt_putstr("SDRAM ERROR\n");
+		}
+	}
+}
+
+void test_sdram(int8_t *sdram_base) {
+	write_sdram(sdram_base);
+	read_sdram(sdram_base);
+}
+
+
 int main()
 { 
   alt_putstr("Hello from Nios II!\n");
 
   int8_t *leds = (int8_t*) PIO_0_BASE;
+  int8_t *sdram_base = (int8_t *) SDRAM_BASE;
 
   /* Event loop never exits. */
   while (1)
@@ -100,6 +133,8 @@ int main()
 			  tmp++;
 		  }
 	  }
+
+	  test_sdram(sdram_base);
   }
 
   return 0;
