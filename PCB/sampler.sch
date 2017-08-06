@@ -65,6 +65,73 @@ F 3 "" H 2300 1300 50  0001 C CNN
 	1    2300 2450
 	1    0    0    -1  
 $EndComp
+$Comp
+L C C1
+U 1 1 5986FFEB
+P 10250 1700
+F 0 "C1" H 10275 1800 50  0000 L CNN
+F 1 "0.1uF" H 10275 1600 50  0000 L CNN
+F 2 "" H 10288 1550 50  0001 C CNN
+F 3 "" H 10250 1700 50  0001 C CNN
+	1    10250 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C2
+U 1 1 598706E8
+P 10000 2400
+F 0 "C2" H 10025 2500 50  0000 L CNN
+F 1 "0.1uF" H 10025 2300 50  0000 L CNN
+F 2 "" H 10038 2250 50  0001 C CNN
+F 3 "" H 10000 2400 50  0001 C CNN
+	1    10000 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C3
+U 1 1 598707D4
+P 10000 3050
+F 0 "C3" H 10025 3150 50  0000 L CNN
+F 1 "0.1uF" H 10025 2950 50  0000 L CNN
+F 2 "" H 10038 2900 50  0001 C CNN
+F 3 "" H 10000 3050 50  0001 C CNN
+	1    10000 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C5
+U 1 1 59870B4F
+P 10350 3050
+F 0 "C5" H 10375 3150 50  0000 L CNN
+F 1 "10uF" H 10375 2950 50  0000 L CNN
+F 2 "" H 10388 2900 50  0001 C CNN
+F 3 "" H 10350 3050 50  0001 C CNN
+	1    10350 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C4
+U 1 1 59870C94
+P 10000 3750
+F 0 "C4" H 10025 3850 50  0000 L CNN
+F 1 "0.1uF" H 10025 3650 50  0000 L CNN
+F 2 "" H 10038 3600 50  0001 C CNN
+F 3 "" H 10000 3750 50  0001 C CNN
+	1    10000 3750
+	1    0    0    -1  
+$EndComp
+Text Label 4500 1650 0    60   ~ 0
+analog-ground
+Text Label 10150 900  0    60   ~ 0
+analog-ground
+Text Label 10250 4100 0    60   ~ 0
+analogground
+Text Label 7100 1150 0    60   ~ 0
+analogsupply
+Text Label 10350 2250 0    60   ~ 0
+lower-ref-V
+Text Label 9400 4400 0    60   ~ 0
+upper-ref-V
 Wire Wire Line
 	5650 1650 2550 1650
 Wire Wire Line
@@ -236,30 +303,7 @@ Wire Wire Line
 Wire Wire Line
 	1850 4500 8350 4500
 Wire Wire Line
-	8350 4500 8350 4150
-Wire Wire Line
-	8350 4150 7750 4150
-Wire Wire Line
-	7750 4150 7750 4200
-Wire Wire Line
 	7750 2050 9500 2050
-Wire Wire Line
-	9500 2050 9500 1200
-Wire Wire Line
-	9500 1200 10250 1200
-Wire Wire Line
-	10250 1200 10250 1550
-$Comp
-L C C1
-U 1 1 5986FFEB
-P 10250 1700
-F 0 "C1" H 10275 1800 50  0000 L CNN
-F 1 "1uF" H 10275 1600 50  0000 L CNN
-F 2 "" H 10288 1550 50  0001 C CNN
-F 3 "" H 10250 1700 50  0001 C CNN
-	1    10250 1700
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	7750 2300 7950 2300
 Wire Wire Line
@@ -272,74 +316,22 @@ Wire Wire Line
 Connection ~ 7950 3100
 Wire Wire Line
 	10850 1850 10250 1850
-$Comp
-L C C2
-U 1 1 598706E8
-P 10000 2400
-F 0 "C2" H 10025 2500 50  0000 L CNN
-F 1 "1uF" H 10025 2300 50  0000 L CNN
-F 2 "" H 10038 2250 50  0001 C CNN
-F 3 "" H 10000 2400 50  0001 C CNN
-	1    10000 2400
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	10850 2550 10000 2550
 Wire Wire Line
-	9600 2250 9600 2900
-Wire Wire Line
 	9600 2250 11150 2250
-$Comp
-L C C3
-U 1 1 598707D4
-P 10000 3050
-F 0 "C3" H 10025 3150 50  0000 L CNN
-F 1 "C" H 10025 2950 50  0000 L CNN
-F 2 "" H 10038 2900 50  0001 C CNN
-F 3 "" H 10000 3050 50  0001 C CNN
-	1    10000 3050
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	9500 3200 10350 3200
 Wire Wire Line
-	9500 3100 9500 3600
-Wire Wire Line
-	9600 2900 11050 2900
+	9500 3100 9500 4400
 Connection ~ 9600 2500
-$Comp
-L C C5
-U 1 1 59870B4F
-P 10350 3050
-F 0 "C5" H 10375 3150 50  0000 L CNN
-F 1 "C" H 10375 2950 50  0000 L CNN
-F 2 "" H 10388 2900 50  0001 C CNN
-F 3 "" H 10350 3050 50  0001 C CNN
-	1    10350 3050
-	1    0    0    -1  
-$EndComp
 Connection ~ 10000 2900
 Connection ~ 10000 3200
-$Comp
-L C C4
-U 1 1 59870C94
-P 10000 3750
-F 0 "C4" H 10025 3850 50  0000 L CNN
-F 1 "C" H 10025 3650 50  0000 L CNN
-F 2 "" H 10038 3600 50  0001 C CNN
-F 3 "" H 10000 3750 50  0001 C CNN
-	1    10000 3750
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	9500 3600 10000 3600
 Connection ~ 9500 3200
 Wire Wire Line
 	10000 3900 10000 4100
-Wire Wire Line
-	11050 2900 11050 4400
-Wire Wire Line
-	11050 4400 2050 4400
 Wire Wire Line
 	2050 4400 2050 3150
 Connection ~ 10350 2900
@@ -368,7 +360,7 @@ Wire Wire Line
 Wire Wire Line
 	2050 1050 2050 1750
 Wire Wire Line
-	950  950  950  2150
+	950  950  950  2450
 Wire Wire Line
 	950  1950 2050 1950
 Connection ~ 5300 950 
@@ -378,4 +370,27 @@ Connection ~ 950  1950
 Wire Wire Line
 	950  2150 2050 2150
 Connection ~ 950  2050
+Connection ~ 9500 3600
+Wire Wire Line
+	9500 4400 2050 4400
+Wire Wire Line
+	9600 2250 9600 2900
+Wire Wire Line
+	9600 2900 10350 2900
+Wire Wire Line
+	9500 2050 9500 1350
+Wire Wire Line
+	9500 1350 10250 1350
+Wire Wire Line
+	10250 1350 10250 1550
+Wire Wire Line
+	950  2350 2050 2350
+Connection ~ 950  2150
+Wire Wire Line
+	950  2450 2050 2450
+Connection ~ 950  2350
+Wire Wire Line
+	7750 4200 8350 4200
+Wire Wire Line
+	8350 4200 8350 4500
 $EndSCHEMATC
