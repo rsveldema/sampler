@@ -1,5 +1,5 @@
 Fitter report for sampler
-Sun Jun 25 19:30:41 2017
+Mon Jul 31 17:39:14 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -75,7 +75,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Sun Jun 25 19:30:41 2017       ;
+; Fitter Status                      ; Successful - Mon Jul 31 17:39:14 2017       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; sampler                                     ;
 ; Top-level Entity Name              ; sampler                                     ;
@@ -161,14 +161,14 @@ agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.07        ;
+; Average used               ; 1.09        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   2.6%      ;
-;     Processor 3            ;   2.4%      ;
-;     Processor 4            ;   2.3%      ;
+;     Processor 2            ;   3.1%      ;
+;     Processor 3            ;   2.9%      ;
+;     Processor 4            ;   2.7%      ;
 +----------------------------+-------------+
 
 
@@ -391,7 +391,7 @@ agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in F:/sampler/sampler.pin.
+The pin-out file can be found in C:/Users/Ronald/Documents/sampler/sampler/sampler.pin.
 
 
 +--------------------------------------------------------------------------+
@@ -2784,9 +2784,9 @@ Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors
 Info (119006): Selected device EP4CE22F17C6 for design "sampler"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
-Warning (15564): Compensate clock of PLL "nios_sampler:nioscore|nios_sampler_sys_sdram_pll_0:sys_sdram_pll_0|altera_up_altpll:sys_pll|altpll:PLL_for_DE_Series_Boards|altpll_3lb2:auto_generated|pll1" has been set to clock1 File: F:/sampler/db/altpll_3lb2.tdf Line: 28
-Info (15535): Implemented PLL "nios_sampler:nioscore|nios_sampler_sys_sdram_pll_0:sys_sdram_pll_0|altera_up_altpll:sys_pll|altpll:PLL_for_DE_Series_Boards|altpll_3lb2:auto_generated|pll1" as Cyclone IV E PLL type File: F:/sampler/db/altpll_3lb2.tdf Line: 28
-    Info (15099): Implementing clock multiplication of 1, clock division of 1, and phase shift of -54 degrees (-3000 ps) for nios_sampler:nioscore|nios_sampler_sys_sdram_pll_0:sys_sdram_pll_0|altera_up_altpll:sys_pll|altpll:PLL_for_DE_Series_Boards|altpll_3lb2:auto_generated|clk[1] port File: F:/sampler/db/altpll_3lb2.tdf Line: 28
+Warning (15564): Compensate clock of PLL "nios_sampler:nioscore|nios_sampler_sys_sdram_pll_0:sys_sdram_pll_0|altera_up_altpll:sys_pll|altpll:PLL_for_DE_Series_Boards|altpll_3lb2:auto_generated|pll1" has been set to clock1 File: C:/Users/Ronald/Documents/sampler/sampler/db/altpll_3lb2.tdf Line: 28
+Info (15535): Implemented PLL "nios_sampler:nioscore|nios_sampler_sys_sdram_pll_0:sys_sdram_pll_0|altera_up_altpll:sys_pll|altpll:PLL_for_DE_Series_Boards|altpll_3lb2:auto_generated|pll1" as Cyclone IV E PLL type File: C:/Users/Ronald/Documents/sampler/sampler/db/altpll_3lb2.tdf Line: 28
+    Info (15099): Implementing clock multiplication of 1, clock division of 1, and phase shift of -54 degrees (-3000 ps) for nios_sampler:nioscore|nios_sampler_sys_sdram_pll_0:sys_sdram_pll_0|altera_up_altpll:sys_pll|altpll:PLL_for_DE_Series_Boards|altpll_3lb2:auto_generated|clk[1] port File: C:/Users/Ronald/Documents/sampler/sampler/db/altpll_3lb2.tdf Line: 28
 Info (171003): Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
 Warning (292013): Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.
 Info (176444): Device migration not selected. If you intend to use device migration later, you may need to change the pin assignments as they may be incompatible with other devices
@@ -2838,8 +2838,8 @@ Info (332104): Reading SDC File: 'sampler.sdc'
 Info (332110): Deriving PLL clocks
     Info (332110): create_generated_clock -source {nioscore|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|inclk[0]} -phase -54.00 -duty_cycle 50.00 -name {nioscore|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1]} {nioscore|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1]}
 Info (332151): Clock uncertainty is not calculated until you update the timing netlist.
-Info (332104): Reading SDC File: 'f:/sampler/db/ip/nios_sampler/submodules/altera_reset_controller.sdc'
-Info (332104): Reading SDC File: 'f:/sampler/db/ip/nios_sampler/submodules/nios_sampler_cpu_cpu.sdc'
+Info (332104): Reading SDC File: 'c:/users/ronald/documents/sampler/sampler/db/ip/nios_sampler/submodules/altera_reset_controller.sdc'
+Info (332104): Reading SDC File: 'c:/users/ronald/documents/sampler/sampler/db/ip/nios_sampler/submodules/nios_sampler_cpu_cpu.sdc'
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
 Info (332129): Detected timing requirements -- optimizing circuit to achieve only the specified requirements
 Info (332111): Found 3 clocks
@@ -2848,24 +2848,24 @@ Info (332111): Found 3 clocks
     Info (332111):  100.000 altera_reserved_tck
     Info (332111):   20.000     CLOCK_50
     Info (332111):   20.000 nioscore|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[1]
-Info (176353): Automatically promoted node CLOCK_50~input (placed in PIN R8 (CLK15, DIFFCLK_6p)) File: F:/sampler/sampler.v Line: 9
+Info (176353): Automatically promoted node CLOCK_50~input (placed in PIN R8 (CLK15, DIFFCLK_6p)) File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 9
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G15
-Info (176353): Automatically promoted node nios_sampler:nioscore|nios_sampler_sys_sdram_pll_0:sys_sdram_pll_0|altera_up_altpll:sys_pll|altpll:PLL_for_DE_Series_Boards|altpll_3lb2:auto_generated|clk[1] (placed in counter C0 of PLL_4) File: F:/sampler/db/altpll_3lb2.tdf Line: 33
+Info (176353): Automatically promoted node nios_sampler:nioscore|nios_sampler_sys_sdram_pll_0:sys_sdram_pll_0|altera_up_altpll:sys_pll|altpll:PLL_for_DE_Series_Boards|altpll_3lb2:auto_generated|clk[1] (placed in counter C0 of PLL_4) File: C:/Users/Ronald/Documents/sampler/sampler/db/altpll_3lb2.tdf Line: 33
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G18
 Info (176353): Automatically promoted node altera_internal_jtag~TCKUTAP 
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-Info (176353): Automatically promoted node nios_sampler:nioscore|altera_reset_controller:rst_controller|r_sync_rst  File: F:/sampler/nios_sampler/synthesis/submodules/altera_reset_controller.v Line: 288
+Info (176353): Automatically promoted node nios_sampler:nioscore|altera_reset_controller:rst_controller|r_sync_rst  File: C:/Users/Ronald/Documents/sampler/sampler/nios_sampler/synthesis/submodules/altera_reset_controller.v Line: 288
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node nios_sampler:nioscore|altera_reset_controller:rst_controller|WideOr0~0 File: F:/sampler/nios_sampler/synthesis/submodules/altera_reset_controller.v Line: 290
-        Info (176357): Destination node nios_sampler:nioscore|nios_sampler_sdram:sdram|active_rnw~5 File: F:/sampler/nios_sampler/synthesis/submodules/nios_sampler_sdram.v Line: 215
-        Info (176357): Destination node nios_sampler:nioscore|nios_sampler_sdram:sdram|active_cs_n~2 File: F:/sampler/nios_sampler/synthesis/submodules/nios_sampler_sdram.v Line: 212
-        Info (176357): Destination node nios_sampler:nioscore|nios_sampler_cpu:cpu|nios_sampler_cpu_cpu:cpu|W_rf_wren File: F:/sampler/nios_sampler/synthesis/submodules/nios_sampler_cpu_cpu.v Line: 3451
-        Info (176357): Destination node nios_sampler:nioscore|nios_sampler_sdram:sdram|i_refs[0] File: F:/sampler/nios_sampler/synthesis/submodules/nios_sampler_sdram.v Line: 356
-        Info (176357): Destination node nios_sampler:nioscore|nios_sampler_sdram:sdram|i_refs[2] File: F:/sampler/nios_sampler/synthesis/submodules/nios_sampler_sdram.v Line: 356
-        Info (176357): Destination node nios_sampler:nioscore|nios_sampler_sdram:sdram|i_refs[1] File: F:/sampler/nios_sampler/synthesis/submodules/nios_sampler_sdram.v Line: 356
-        Info (176357): Destination node nios_sampler:nioscore|nios_sampler_cpu:cpu|nios_sampler_cpu_cpu:cpu|nios_sampler_cpu_cpu_nios2_oci:the_nios_sampler_cpu_cpu_nios2_oci|nios_sampler_cpu_cpu_nios2_oci_debug:the_nios_sampler_cpu_cpu_nios2_oci_debug|altera_std_synchronizer:the_altera_std_synchronizer|din_s1 File: f:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altera_std_synchronizer.v Line: 45
-Info (176353): Automatically promoted node nios_sampler:nioscore|nios_sampler_cpu:cpu|nios_sampler_cpu_cpu:cpu|nios_sampler_cpu_cpu_nios2_oci:the_nios_sampler_cpu_cpu_nios2_oci|nios_sampler_cpu_cpu_nios2_oci_debug:the_nios_sampler_cpu_cpu_nios2_oci_debug|resetrequest  File: F:/sampler/nios_sampler/synthesis/submodules/nios_sampler_cpu_cpu.v Line: 186
+        Info (176357): Destination node nios_sampler:nioscore|altera_reset_controller:rst_controller|WideOr0~0 File: C:/Users/Ronald/Documents/sampler/sampler/nios_sampler/synthesis/submodules/altera_reset_controller.v Line: 290
+        Info (176357): Destination node nios_sampler:nioscore|nios_sampler_sdram:sdram|active_rnw~5 File: C:/Users/Ronald/Documents/sampler/sampler/nios_sampler/synthesis/submodules/nios_sampler_sdram.v Line: 215
+        Info (176357): Destination node nios_sampler:nioscore|nios_sampler_sdram:sdram|active_cs_n~2 File: C:/Users/Ronald/Documents/sampler/sampler/nios_sampler/synthesis/submodules/nios_sampler_sdram.v Line: 212
+        Info (176357): Destination node nios_sampler:nioscore|nios_sampler_cpu:cpu|nios_sampler_cpu_cpu:cpu|W_rf_wren File: C:/Users/Ronald/Documents/sampler/sampler/nios_sampler/synthesis/submodules/nios_sampler_cpu_cpu.v Line: 3451
+        Info (176357): Destination node nios_sampler:nioscore|nios_sampler_sdram:sdram|i_refs[0] File: C:/Users/Ronald/Documents/sampler/sampler/nios_sampler/synthesis/submodules/nios_sampler_sdram.v Line: 356
+        Info (176357): Destination node nios_sampler:nioscore|nios_sampler_sdram:sdram|i_refs[2] File: C:/Users/Ronald/Documents/sampler/sampler/nios_sampler/synthesis/submodules/nios_sampler_sdram.v Line: 356
+        Info (176357): Destination node nios_sampler:nioscore|nios_sampler_sdram:sdram|i_refs[1] File: C:/Users/Ronald/Documents/sampler/sampler/nios_sampler/synthesis/submodules/nios_sampler_sdram.v Line: 356
+        Info (176357): Destination node nios_sampler:nioscore|nios_sampler_cpu:cpu|nios_sampler_cpu_cpu:cpu|nios_sampler_cpu_cpu_nios2_oci:the_nios_sampler_cpu_cpu_nios2_oci|nios_sampler_cpu_cpu_nios2_oci_debug:the_nios_sampler_cpu_cpu_nios2_oci_debug|altera_std_synchronizer:the_altera_std_synchronizer|din_s1 File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altera_std_synchronizer.v Line: 45
+Info (176353): Automatically promoted node nios_sampler:nioscore|nios_sampler_cpu:cpu|nios_sampler_cpu_cpu:cpu|nios_sampler_cpu_cpu_nios2_oci:the_nios_sampler_cpu_cpu_nios2_oci|nios_sampler_cpu_cpu_nios2_oci_debug:the_nios_sampler_cpu_cpu_nios2_oci_debug|resetrequest  File: C:/Users/Ronald/Documents/sampler/sampler/nios_sampler/synthesis/submodules/nios_sampler_cpu_cpu.v Line: 186
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
 Info (176233): Starting register packing
 Warning (176250): Ignoring invalid fast I/O register assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
@@ -2895,242 +2895,242 @@ Info (176235): Finished register packing
     Extra Info (176218): Packed 16 registers into blocks of type I/O Input Buffer
     Extra Info (176218): Packed 53 registers into blocks of type I/O Output Buffer
     Extra Info (176220): Created 34 register duplicates
-Warning (15058): PLL "nios_sampler:nioscore|nios_sampler_sys_sdram_pll_0:sys_sdram_pll_0|altera_up_altpll:sys_pll|altpll:PLL_for_DE_Series_Boards|altpll_3lb2:auto_generated|pll1" is in normal or source synchronous mode with output clock "compensate_clock" set to clk[1] that is not fully compensated because it feeds an output pin -- only PLLs in zero delay buffer mode can fully compensate output pins File: F:/sampler/db/altpll_3lb2.tdf Line: 28
-Warning (15064): PLL "nios_sampler:nioscore|nios_sampler_sys_sdram_pll_0:sys_sdram_pll_0|altera_up_altpll:sys_pll|altpll:PLL_for_DE_Series_Boards|altpll_3lb2:auto_generated|pll1" output port clk[1] feeds output pin "DRAM_CLK~output" via non-dedicated routing -- jitter performance depends on switching rate of other design elements. Use PLL dedicated clock outputs to ensure jitter performance File: F:/sampler/db/altpll_3lb2.tdf Line: 28
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:07
+Warning (15058): PLL "nios_sampler:nioscore|nios_sampler_sys_sdram_pll_0:sys_sdram_pll_0|altera_up_altpll:sys_pll|altpll:PLL_for_DE_Series_Boards|altpll_3lb2:auto_generated|pll1" is in normal or source synchronous mode with output clock "compensate_clock" set to clk[1] that is not fully compensated because it feeds an output pin -- only PLLs in zero delay buffer mode can fully compensate output pins File: C:/Users/Ronald/Documents/sampler/sampler/db/altpll_3lb2.tdf Line: 28
+Warning (15064): PLL "nios_sampler:nioscore|nios_sampler_sys_sdram_pll_0:sys_sdram_pll_0|altera_up_altpll:sys_pll|altpll:PLL_for_DE_Series_Boards|altpll_3lb2:auto_generated|pll1" output port clk[1] feeds output pin "DRAM_CLK~output" via non-dedicated routing -- jitter performance depends on switching rate of other design elements. Use PLL dedicated clock outputs to ensure jitter performance File: C:/Users/Ronald/Documents/sampler/sampler/db/altpll_3lb2.tdf Line: 28
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:03
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:01
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:02
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 4% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 20% of the available device resources in the region that extends from location X21_Y11 to location X31_Y22
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:03
-Info (11888): Total time spent on timing analysis during the Fitter is 1.82 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
+Info (11888): Total time spent on timing analysis during the Fitter is 1.31 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:03
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Warning (169180): Following 1 pins must use external clamping diodes.
-    Info (169178): Pin EPCS_DATA0 uses I/O standard 3.3-V LVTTL at H2 File: F:/sampler/sampler.v Line: 34
+    Info (169178): Pin EPCS_DATA0 uses I/O standard 3.3-V LVTTL at H2 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 34
 Warning (169177): 114 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing Cyclone IV E Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
-    Info (169178): Pin KEY[0] uses I/O standard 3.3-V LVTTL at J15 File: F:/sampler/sampler.v Line: 15
-    Info (169178): Pin KEY[1] uses I/O standard 3.3-V LVTTL at E1 File: F:/sampler/sampler.v Line: 15
-    Info (169178): Pin SW[0] uses I/O standard 3.3-V LVTTL at M1 File: F:/sampler/sampler.v Line: 18
-    Info (169178): Pin SW[1] uses I/O standard 3.3-V LVTTL at T8 File: F:/sampler/sampler.v Line: 18
-    Info (169178): Pin SW[2] uses I/O standard 3.3-V LVTTL at B9 File: F:/sampler/sampler.v Line: 18
-    Info (169178): Pin SW[3] uses I/O standard 3.3-V LVTTL at M15 File: F:/sampler/sampler.v Line: 18
-    Info (169178): Pin G_SENSOR_INT uses I/O standard 3.3-V LVTTL at M2 File: F:/sampler/sampler.v Line: 40
-    Info (169178): Pin ADC_SDAT uses I/O standard 3.3-V LVTTL at A9 File: F:/sampler/sampler.v Line: 48
-    Info (169178): Pin GPIO_2_IN[0] uses I/O standard 3.3-V LVTTL at E15 File: F:/sampler/sampler.v Line: 52
-    Info (169178): Pin GPIO_2_IN[1] uses I/O standard 3.3-V LVTTL at E16 File: F:/sampler/sampler.v Line: 52
-    Info (169178): Pin GPIO_2_IN[2] uses I/O standard 3.3-V LVTTL at M16 File: F:/sampler/sampler.v Line: 52
-    Info (169178): Pin gpio0ports_IN[0] uses I/O standard 3.3-V LVTTL at A8 File: F:/sampler/sampler.v Line: 56
-    Info (169178): Pin gpio0ports_IN[1] uses I/O standard 3.3-V LVTTL at B8 File: F:/sampler/sampler.v Line: 56
-    Info (169178): Pin gpio1ports_IN[0] uses I/O standard 3.3-V LVTTL at T9 File: F:/sampler/sampler.v Line: 61
-    Info (169178): Pin gpio1ports_IN[1] uses I/O standard 3.3-V LVTTL at R9 File: F:/sampler/sampler.v Line: 61
-    Info (169178): Pin I2C_SDAT uses I/O standard 3.3-V LVTTL at F1 File: F:/sampler/sampler.v Line: 42
-    Info (169178): Pin GPIO_2[0] uses I/O standard 3.3-V LVTTL at A14 File: F:/sampler/sampler.v Line: 51
-    Info (169178): Pin GPIO_2[1] uses I/O standard 3.3-V LVTTL at B16 File: F:/sampler/sampler.v Line: 51
-    Info (169178): Pin GPIO_2[2] uses I/O standard 3.3-V LVTTL at C14 File: F:/sampler/sampler.v Line: 51
-    Info (169178): Pin GPIO_2[3] uses I/O standard 3.3-V LVTTL at C16 File: F:/sampler/sampler.v Line: 51
-    Info (169178): Pin GPIO_2[4] uses I/O standard 3.3-V LVTTL at C15 File: F:/sampler/sampler.v Line: 51
-    Info (169178): Pin GPIO_2[5] uses I/O standard 3.3-V LVTTL at D16 File: F:/sampler/sampler.v Line: 51
-    Info (169178): Pin GPIO_2[6] uses I/O standard 3.3-V LVTTL at D15 File: F:/sampler/sampler.v Line: 51
-    Info (169178): Pin GPIO_2[7] uses I/O standard 3.3-V LVTTL at D14 File: F:/sampler/sampler.v Line: 51
-    Info (169178): Pin GPIO_2[8] uses I/O standard 3.3-V LVTTL at F15 File: F:/sampler/sampler.v Line: 51
-    Info (169178): Pin GPIO_2[9] uses I/O standard 3.3-V LVTTL at F16 File: F:/sampler/sampler.v Line: 51
-    Info (169178): Pin GPIO_2[10] uses I/O standard 3.3-V LVTTL at F14 File: F:/sampler/sampler.v Line: 51
-    Info (169178): Pin GPIO_2[11] uses I/O standard 3.3-V LVTTL at G16 File: F:/sampler/sampler.v Line: 51
-    Info (169178): Pin GPIO_2[12] uses I/O standard 3.3-V LVTTL at G15 File: F:/sampler/sampler.v Line: 51
-    Info (169178): Pin gpio0ports[0] uses I/O standard 3.3-V LVTTL at D3 File: F:/sampler/sampler.v Line: 55
-    Info (169178): Pin gpio0ports[1] uses I/O standard 3.3-V LVTTL at C3 File: F:/sampler/sampler.v Line: 55
-    Info (169178): Pin gpio0ports[2] uses I/O standard 3.3-V LVTTL at A2 File: F:/sampler/sampler.v Line: 55
-    Info (169178): Pin gpio0ports[3] uses I/O standard 3.3-V LVTTL at A3 File: F:/sampler/sampler.v Line: 55
-    Info (169178): Pin gpio0ports[4] uses I/O standard 3.3-V LVTTL at B3 File: F:/sampler/sampler.v Line: 55
-    Info (169178): Pin gpio0ports[5] uses I/O standard 3.3-V LVTTL at B4 File: F:/sampler/sampler.v Line: 55
-    Info (169178): Pin gpio0ports[6] uses I/O standard 3.3-V LVTTL at A4 File: F:/sampler/sampler.v Line: 55
-    Info (169178): Pin gpio0ports[7] uses I/O standard 3.3-V LVTTL at B5 File: F:/sampler/sampler.v Line: 55
-    Info (169178): Pin gpio0ports[8] uses I/O standard 3.3-V LVTTL at A5 File: F:/sampler/sampler.v Line: 55
-    Info (169178): Pin gpio0ports[9] uses I/O standard 3.3-V LVTTL at D5 File: F:/sampler/sampler.v Line: 55
-    Info (169178): Pin gpio0ports[10] uses I/O standard 3.3-V LVTTL at B6 File: F:/sampler/sampler.v Line: 55
-    Info (169178): Pin gpio0ports[11] uses I/O standard 3.3-V LVTTL at A6 File: F:/sampler/sampler.v Line: 55
-    Info (169178): Pin gpio0ports[12] uses I/O standard 3.3-V LVTTL at B7 File: F:/sampler/sampler.v Line: 55
-    Info (169178): Pin gpio0ports[13] uses I/O standard 3.3-V LVTTL at D6 File: F:/sampler/sampler.v Line: 55
-    Info (169178): Pin gpio0ports[14] uses I/O standard 3.3-V LVTTL at A7 File: F:/sampler/sampler.v Line: 55
-    Info (169178): Pin gpio0ports[15] uses I/O standard 3.3-V LVTTL at C6 File: F:/sampler/sampler.v Line: 55
-    Info (169178): Pin gpio0ports[16] uses I/O standard 3.3-V LVTTL at C8 File: F:/sampler/sampler.v Line: 55
-    Info (169178): Pin gpio0ports[17] uses I/O standard 3.3-V LVTTL at E6 File: F:/sampler/sampler.v Line: 55
-    Info (169178): Pin gpio0ports[18] uses I/O standard 3.3-V LVTTL at E7 File: F:/sampler/sampler.v Line: 55
-    Info (169178): Pin gpio0ports[19] uses I/O standard 3.3-V LVTTL at D8 File: F:/sampler/sampler.v Line: 55
-    Info (169178): Pin gpio0ports[20] uses I/O standard 3.3-V LVTTL at E8 File: F:/sampler/sampler.v Line: 55
-    Info (169178): Pin gpio0ports[21] uses I/O standard 3.3-V LVTTL at F8 File: F:/sampler/sampler.v Line: 55
-    Info (169178): Pin gpio0ports[22] uses I/O standard 3.3-V LVTTL at F9 File: F:/sampler/sampler.v Line: 55
-    Info (169178): Pin gpio0ports[23] uses I/O standard 3.3-V LVTTL at E9 File: F:/sampler/sampler.v Line: 55
-    Info (169178): Pin gpio0ports[24] uses I/O standard 3.3-V LVTTL at C9 File: F:/sampler/sampler.v Line: 55
-    Info (169178): Pin gpio0ports[25] uses I/O standard 3.3-V LVTTL at D9 File: F:/sampler/sampler.v Line: 55
-    Info (169178): Pin gpio0ports[26] uses I/O standard 3.3-V LVTTL at E11 File: F:/sampler/sampler.v Line: 55
-    Info (169178): Pin gpio0ports[27] uses I/O standard 3.3-V LVTTL at E10 File: F:/sampler/sampler.v Line: 55
-    Info (169178): Pin gpio0ports[28] uses I/O standard 3.3-V LVTTL at C11 File: F:/sampler/sampler.v Line: 55
-    Info (169178): Pin gpio0ports[29] uses I/O standard 3.3-V LVTTL at B11 File: F:/sampler/sampler.v Line: 55
-    Info (169178): Pin gpio0ports[30] uses I/O standard 3.3-V LVTTL at A12 File: F:/sampler/sampler.v Line: 55
-    Info (169178): Pin gpio0ports[31] uses I/O standard 3.3-V LVTTL at D11 File: F:/sampler/sampler.v Line: 55
-    Info (169178): Pin gpio0ports[32] uses I/O standard 3.3-V LVTTL at D12 File: F:/sampler/sampler.v Line: 55
-    Info (169178): Pin gpio0ports[33] uses I/O standard 3.3-V LVTTL at B12 File: F:/sampler/sampler.v Line: 55
-    Info (169178): Pin gpio1ports[0] uses I/O standard 3.3-V LVTTL at F13 File: F:/sampler/sampler.v Line: 59
-    Info (169178): Pin gpio1ports[1] uses I/O standard 3.3-V LVTTL at T15 File: F:/sampler/sampler.v Line: 59
-    Info (169178): Pin gpio1ports[2] uses I/O standard 3.3-V LVTTL at T14 File: F:/sampler/sampler.v Line: 59
-    Info (169178): Pin gpio1ports[3] uses I/O standard 3.3-V LVTTL at T13 File: F:/sampler/sampler.v Line: 59
-    Info (169178): Pin gpio1ports[4] uses I/O standard 3.3-V LVTTL at R13 File: F:/sampler/sampler.v Line: 59
-    Info (169178): Pin gpio1ports[5] uses I/O standard 3.3-V LVTTL at T12 File: F:/sampler/sampler.v Line: 59
-    Info (169178): Pin gpio1ports[6] uses I/O standard 3.3-V LVTTL at R12 File: F:/sampler/sampler.v Line: 59
-    Info (169178): Pin gpio1ports[7] uses I/O standard 3.3-V LVTTL at T11 File: F:/sampler/sampler.v Line: 59
-    Info (169178): Pin gpio1ports[8] uses I/O standard 3.3-V LVTTL at T10 File: F:/sampler/sampler.v Line: 59
-    Info (169178): Pin gpio1ports[9] uses I/O standard 3.3-V LVTTL at R11 File: F:/sampler/sampler.v Line: 59
-    Info (169178): Pin gpio1ports[10] uses I/O standard 3.3-V LVTTL at P11 File: F:/sampler/sampler.v Line: 59
-    Info (169178): Pin gpio1ports[11] uses I/O standard 3.3-V LVTTL at R10 File: F:/sampler/sampler.v Line: 59
-    Info (169178): Pin gpio1ports[12] uses I/O standard 3.3-V LVTTL at N12 File: F:/sampler/sampler.v Line: 59
-    Info (169178): Pin gpio1ports[13] uses I/O standard 3.3-V LVTTL at P9 File: F:/sampler/sampler.v Line: 59
-    Info (169178): Pin gpio1ports[14] uses I/O standard 3.3-V LVTTL at N9 File: F:/sampler/sampler.v Line: 59
-    Info (169178): Pin gpio1ports[15] uses I/O standard 3.3-V LVTTL at N11 File: F:/sampler/sampler.v Line: 59
-    Info (169178): Pin gpio1ports[16] uses I/O standard 3.3-V LVTTL at L16 File: F:/sampler/sampler.v Line: 59
-    Info (169178): Pin gpio1ports[17] uses I/O standard 3.3-V LVTTL at K16 File: F:/sampler/sampler.v Line: 59
-    Info (169178): Pin gpio1ports[18] uses I/O standard 3.3-V LVTTL at R16 File: F:/sampler/sampler.v Line: 59
-    Info (169178): Pin gpio1ports[19] uses I/O standard 3.3-V LVTTL at L15 File: F:/sampler/sampler.v Line: 59
-    Info (169178): Pin gpio1ports[20] uses I/O standard 3.3-V LVTTL at P15 File: F:/sampler/sampler.v Line: 59
-    Info (169178): Pin gpio1ports[21] uses I/O standard 3.3-V LVTTL at P16 File: F:/sampler/sampler.v Line: 59
-    Info (169178): Pin gpio1ports[22] uses I/O standard 3.3-V LVTTL at R14 File: F:/sampler/sampler.v Line: 59
-    Info (169178): Pin gpio1ports[23] uses I/O standard 3.3-V LVTTL at N16 File: F:/sampler/sampler.v Line: 59
-    Info (169178): Pin gpio1ports[24] uses I/O standard 3.3-V LVTTL at N15 File: F:/sampler/sampler.v Line: 59
-    Info (169178): Pin gpio1ports[25] uses I/O standard 3.3-V LVTTL at P14 File: F:/sampler/sampler.v Line: 59
-    Info (169178): Pin gpio1ports[26] uses I/O standard 3.3-V LVTTL at L14 File: F:/sampler/sampler.v Line: 59
-    Info (169178): Pin gpio1ports[27] uses I/O standard 3.3-V LVTTL at N14 File: F:/sampler/sampler.v Line: 59
-    Info (169178): Pin gpio1ports[28] uses I/O standard 3.3-V LVTTL at M10 File: F:/sampler/sampler.v Line: 59
-    Info (169178): Pin gpio1ports[29] uses I/O standard 3.3-V LVTTL at L13 File: F:/sampler/sampler.v Line: 59
-    Info (169178): Pin gpio1ports[30] uses I/O standard 3.3-V LVTTL at J16 File: F:/sampler/sampler.v Line: 59
-    Info (169178): Pin gpio1ports[31] uses I/O standard 3.3-V LVTTL at K15 File: F:/sampler/sampler.v Line: 59
-    Info (169178): Pin gpio1ports[32] uses I/O standard 3.3-V LVTTL at J13 File: F:/sampler/sampler.v Line: 59
-    Info (169178): Pin gpio1ports[33] uses I/O standard 3.3-V LVTTL at J14 File: F:/sampler/sampler.v Line: 59
-    Info (169178): Pin DRAM_DQ[0] uses I/O standard 3.3-V LVTTL at G2 File: F:/sampler/sampler.v Line: 27
-    Info (169178): Pin DRAM_DQ[1] uses I/O standard 3.3-V LVTTL at G1 File: F:/sampler/sampler.v Line: 27
-    Info (169178): Pin DRAM_DQ[2] uses I/O standard 3.3-V LVTTL at L8 File: F:/sampler/sampler.v Line: 27
-    Info (169178): Pin DRAM_DQ[3] uses I/O standard 3.3-V LVTTL at K5 File: F:/sampler/sampler.v Line: 27
-    Info (169178): Pin DRAM_DQ[4] uses I/O standard 3.3-V LVTTL at K2 File: F:/sampler/sampler.v Line: 27
-    Info (169178): Pin DRAM_DQ[5] uses I/O standard 3.3-V LVTTL at J2 File: F:/sampler/sampler.v Line: 27
-    Info (169178): Pin DRAM_DQ[6] uses I/O standard 3.3-V LVTTL at J1 File: F:/sampler/sampler.v Line: 27
-    Info (169178): Pin DRAM_DQ[7] uses I/O standard 3.3-V LVTTL at R7 File: F:/sampler/sampler.v Line: 27
-    Info (169178): Pin DRAM_DQ[8] uses I/O standard 3.3-V LVTTL at T4 File: F:/sampler/sampler.v Line: 27
-    Info (169178): Pin DRAM_DQ[9] uses I/O standard 3.3-V LVTTL at T2 File: F:/sampler/sampler.v Line: 27
-    Info (169178): Pin DRAM_DQ[10] uses I/O standard 3.3-V LVTTL at T3 File: F:/sampler/sampler.v Line: 27
-    Info (169178): Pin DRAM_DQ[11] uses I/O standard 3.3-V LVTTL at R3 File: F:/sampler/sampler.v Line: 27
-    Info (169178): Pin DRAM_DQ[12] uses I/O standard 3.3-V LVTTL at R5 File: F:/sampler/sampler.v Line: 27
-    Info (169178): Pin DRAM_DQ[13] uses I/O standard 3.3-V LVTTL at P3 File: F:/sampler/sampler.v Line: 27
-    Info (169178): Pin DRAM_DQ[14] uses I/O standard 3.3-V LVTTL at N3 File: F:/sampler/sampler.v Line: 27
-    Info (169178): Pin DRAM_DQ[15] uses I/O standard 3.3-V LVTTL at K1 File: F:/sampler/sampler.v Line: 27
-    Info (169178): Pin CLOCK_50 uses I/O standard 3.3-V LVTTL at R8 File: F:/sampler/sampler.v Line: 9
+    Info (169178): Pin KEY[0] uses I/O standard 3.3-V LVTTL at J15 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 15
+    Info (169178): Pin KEY[1] uses I/O standard 3.3-V LVTTL at E1 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 15
+    Info (169178): Pin SW[0] uses I/O standard 3.3-V LVTTL at M1 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 18
+    Info (169178): Pin SW[1] uses I/O standard 3.3-V LVTTL at T8 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 18
+    Info (169178): Pin SW[2] uses I/O standard 3.3-V LVTTL at B9 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 18
+    Info (169178): Pin SW[3] uses I/O standard 3.3-V LVTTL at M15 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 18
+    Info (169178): Pin G_SENSOR_INT uses I/O standard 3.3-V LVTTL at M2 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 40
+    Info (169178): Pin ADC_SDAT uses I/O standard 3.3-V LVTTL at A9 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 48
+    Info (169178): Pin GPIO_2_IN[0] uses I/O standard 3.3-V LVTTL at E15 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 52
+    Info (169178): Pin GPIO_2_IN[1] uses I/O standard 3.3-V LVTTL at E16 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 52
+    Info (169178): Pin GPIO_2_IN[2] uses I/O standard 3.3-V LVTTL at M16 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 52
+    Info (169178): Pin gpio0ports_IN[0] uses I/O standard 3.3-V LVTTL at A8 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 56
+    Info (169178): Pin gpio0ports_IN[1] uses I/O standard 3.3-V LVTTL at B8 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 56
+    Info (169178): Pin gpio1ports_IN[0] uses I/O standard 3.3-V LVTTL at T9 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 61
+    Info (169178): Pin gpio1ports_IN[1] uses I/O standard 3.3-V LVTTL at R9 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 61
+    Info (169178): Pin I2C_SDAT uses I/O standard 3.3-V LVTTL at F1 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 42
+    Info (169178): Pin GPIO_2[0] uses I/O standard 3.3-V LVTTL at A14 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 51
+    Info (169178): Pin GPIO_2[1] uses I/O standard 3.3-V LVTTL at B16 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 51
+    Info (169178): Pin GPIO_2[2] uses I/O standard 3.3-V LVTTL at C14 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 51
+    Info (169178): Pin GPIO_2[3] uses I/O standard 3.3-V LVTTL at C16 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 51
+    Info (169178): Pin GPIO_2[4] uses I/O standard 3.3-V LVTTL at C15 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 51
+    Info (169178): Pin GPIO_2[5] uses I/O standard 3.3-V LVTTL at D16 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 51
+    Info (169178): Pin GPIO_2[6] uses I/O standard 3.3-V LVTTL at D15 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 51
+    Info (169178): Pin GPIO_2[7] uses I/O standard 3.3-V LVTTL at D14 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 51
+    Info (169178): Pin GPIO_2[8] uses I/O standard 3.3-V LVTTL at F15 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 51
+    Info (169178): Pin GPIO_2[9] uses I/O standard 3.3-V LVTTL at F16 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 51
+    Info (169178): Pin GPIO_2[10] uses I/O standard 3.3-V LVTTL at F14 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 51
+    Info (169178): Pin GPIO_2[11] uses I/O standard 3.3-V LVTTL at G16 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 51
+    Info (169178): Pin GPIO_2[12] uses I/O standard 3.3-V LVTTL at G15 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 51
+    Info (169178): Pin gpio0ports[0] uses I/O standard 3.3-V LVTTL at D3 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169178): Pin gpio0ports[1] uses I/O standard 3.3-V LVTTL at C3 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169178): Pin gpio0ports[2] uses I/O standard 3.3-V LVTTL at A2 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169178): Pin gpio0ports[3] uses I/O standard 3.3-V LVTTL at A3 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169178): Pin gpio0ports[4] uses I/O standard 3.3-V LVTTL at B3 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169178): Pin gpio0ports[5] uses I/O standard 3.3-V LVTTL at B4 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169178): Pin gpio0ports[6] uses I/O standard 3.3-V LVTTL at A4 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169178): Pin gpio0ports[7] uses I/O standard 3.3-V LVTTL at B5 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169178): Pin gpio0ports[8] uses I/O standard 3.3-V LVTTL at A5 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169178): Pin gpio0ports[9] uses I/O standard 3.3-V LVTTL at D5 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169178): Pin gpio0ports[10] uses I/O standard 3.3-V LVTTL at B6 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169178): Pin gpio0ports[11] uses I/O standard 3.3-V LVTTL at A6 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169178): Pin gpio0ports[12] uses I/O standard 3.3-V LVTTL at B7 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169178): Pin gpio0ports[13] uses I/O standard 3.3-V LVTTL at D6 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169178): Pin gpio0ports[14] uses I/O standard 3.3-V LVTTL at A7 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169178): Pin gpio0ports[15] uses I/O standard 3.3-V LVTTL at C6 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169178): Pin gpio0ports[16] uses I/O standard 3.3-V LVTTL at C8 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169178): Pin gpio0ports[17] uses I/O standard 3.3-V LVTTL at E6 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169178): Pin gpio0ports[18] uses I/O standard 3.3-V LVTTL at E7 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169178): Pin gpio0ports[19] uses I/O standard 3.3-V LVTTL at D8 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169178): Pin gpio0ports[20] uses I/O standard 3.3-V LVTTL at E8 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169178): Pin gpio0ports[21] uses I/O standard 3.3-V LVTTL at F8 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169178): Pin gpio0ports[22] uses I/O standard 3.3-V LVTTL at F9 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169178): Pin gpio0ports[23] uses I/O standard 3.3-V LVTTL at E9 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169178): Pin gpio0ports[24] uses I/O standard 3.3-V LVTTL at C9 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169178): Pin gpio0ports[25] uses I/O standard 3.3-V LVTTL at D9 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169178): Pin gpio0ports[26] uses I/O standard 3.3-V LVTTL at E11 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169178): Pin gpio0ports[27] uses I/O standard 3.3-V LVTTL at E10 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169178): Pin gpio0ports[28] uses I/O standard 3.3-V LVTTL at C11 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169178): Pin gpio0ports[29] uses I/O standard 3.3-V LVTTL at B11 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169178): Pin gpio0ports[30] uses I/O standard 3.3-V LVTTL at A12 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169178): Pin gpio0ports[31] uses I/O standard 3.3-V LVTTL at D11 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169178): Pin gpio0ports[32] uses I/O standard 3.3-V LVTTL at D12 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169178): Pin gpio0ports[33] uses I/O standard 3.3-V LVTTL at B12 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169178): Pin gpio1ports[0] uses I/O standard 3.3-V LVTTL at F13 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169178): Pin gpio1ports[1] uses I/O standard 3.3-V LVTTL at T15 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169178): Pin gpio1ports[2] uses I/O standard 3.3-V LVTTL at T14 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169178): Pin gpio1ports[3] uses I/O standard 3.3-V LVTTL at T13 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169178): Pin gpio1ports[4] uses I/O standard 3.3-V LVTTL at R13 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169178): Pin gpio1ports[5] uses I/O standard 3.3-V LVTTL at T12 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169178): Pin gpio1ports[6] uses I/O standard 3.3-V LVTTL at R12 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169178): Pin gpio1ports[7] uses I/O standard 3.3-V LVTTL at T11 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169178): Pin gpio1ports[8] uses I/O standard 3.3-V LVTTL at T10 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169178): Pin gpio1ports[9] uses I/O standard 3.3-V LVTTL at R11 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169178): Pin gpio1ports[10] uses I/O standard 3.3-V LVTTL at P11 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169178): Pin gpio1ports[11] uses I/O standard 3.3-V LVTTL at R10 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169178): Pin gpio1ports[12] uses I/O standard 3.3-V LVTTL at N12 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169178): Pin gpio1ports[13] uses I/O standard 3.3-V LVTTL at P9 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169178): Pin gpio1ports[14] uses I/O standard 3.3-V LVTTL at N9 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169178): Pin gpio1ports[15] uses I/O standard 3.3-V LVTTL at N11 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169178): Pin gpio1ports[16] uses I/O standard 3.3-V LVTTL at L16 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169178): Pin gpio1ports[17] uses I/O standard 3.3-V LVTTL at K16 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169178): Pin gpio1ports[18] uses I/O standard 3.3-V LVTTL at R16 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169178): Pin gpio1ports[19] uses I/O standard 3.3-V LVTTL at L15 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169178): Pin gpio1ports[20] uses I/O standard 3.3-V LVTTL at P15 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169178): Pin gpio1ports[21] uses I/O standard 3.3-V LVTTL at P16 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169178): Pin gpio1ports[22] uses I/O standard 3.3-V LVTTL at R14 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169178): Pin gpio1ports[23] uses I/O standard 3.3-V LVTTL at N16 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169178): Pin gpio1ports[24] uses I/O standard 3.3-V LVTTL at N15 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169178): Pin gpio1ports[25] uses I/O standard 3.3-V LVTTL at P14 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169178): Pin gpio1ports[26] uses I/O standard 3.3-V LVTTL at L14 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169178): Pin gpio1ports[27] uses I/O standard 3.3-V LVTTL at N14 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169178): Pin gpio1ports[28] uses I/O standard 3.3-V LVTTL at M10 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169178): Pin gpio1ports[29] uses I/O standard 3.3-V LVTTL at L13 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169178): Pin gpio1ports[30] uses I/O standard 3.3-V LVTTL at J16 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169178): Pin gpio1ports[31] uses I/O standard 3.3-V LVTTL at K15 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169178): Pin gpio1ports[32] uses I/O standard 3.3-V LVTTL at J13 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169178): Pin gpio1ports[33] uses I/O standard 3.3-V LVTTL at J14 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169178): Pin DRAM_DQ[0] uses I/O standard 3.3-V LVTTL at G2 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 27
+    Info (169178): Pin DRAM_DQ[1] uses I/O standard 3.3-V LVTTL at G1 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 27
+    Info (169178): Pin DRAM_DQ[2] uses I/O standard 3.3-V LVTTL at L8 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 27
+    Info (169178): Pin DRAM_DQ[3] uses I/O standard 3.3-V LVTTL at K5 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 27
+    Info (169178): Pin DRAM_DQ[4] uses I/O standard 3.3-V LVTTL at K2 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 27
+    Info (169178): Pin DRAM_DQ[5] uses I/O standard 3.3-V LVTTL at J2 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 27
+    Info (169178): Pin DRAM_DQ[6] uses I/O standard 3.3-V LVTTL at J1 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 27
+    Info (169178): Pin DRAM_DQ[7] uses I/O standard 3.3-V LVTTL at R7 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 27
+    Info (169178): Pin DRAM_DQ[8] uses I/O standard 3.3-V LVTTL at T4 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 27
+    Info (169178): Pin DRAM_DQ[9] uses I/O standard 3.3-V LVTTL at T2 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 27
+    Info (169178): Pin DRAM_DQ[10] uses I/O standard 3.3-V LVTTL at T3 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 27
+    Info (169178): Pin DRAM_DQ[11] uses I/O standard 3.3-V LVTTL at R3 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 27
+    Info (169178): Pin DRAM_DQ[12] uses I/O standard 3.3-V LVTTL at R5 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 27
+    Info (169178): Pin DRAM_DQ[13] uses I/O standard 3.3-V LVTTL at P3 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 27
+    Info (169178): Pin DRAM_DQ[14] uses I/O standard 3.3-V LVTTL at N3 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 27
+    Info (169178): Pin DRAM_DQ[15] uses I/O standard 3.3-V LVTTL at K1 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 27
+    Info (169178): Pin CLOCK_50 uses I/O standard 3.3-V LVTTL at R8 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 9
 Warning (169203): PCI-clamp diode is not supported in this mode. The following 1 pins must meet the Intel FPGA requirements for 3.3V, 3.0V, and 2.5V interfaces if they are connected to devices other than the supported configuration devices. In these cases, Intel recommends termination method as specified in the Application Note 447.
-    Info (169178): Pin EPCS_DATA0 uses I/O standard 3.3-V LVTTL at H2 File: F:/sampler/sampler.v Line: 34
+    Info (169178): Pin EPCS_DATA0 uses I/O standard 3.3-V LVTTL at H2 File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 34
 Warning (169064): Following 82 pins have no output enable or a GND or VCC output enable - later changes to this connectivity may change fitting results
-    Info (169065): Pin I2C_SDAT has a permanently disabled output enable File: F:/sampler/sampler.v Line: 42
-    Info (169065): Pin GPIO_2[0] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 51
-    Info (169065): Pin GPIO_2[1] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 51
-    Info (169065): Pin GPIO_2[2] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 51
-    Info (169065): Pin GPIO_2[3] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 51
-    Info (169065): Pin GPIO_2[4] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 51
-    Info (169065): Pin GPIO_2[5] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 51
-    Info (169065): Pin GPIO_2[6] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 51
-    Info (169065): Pin GPIO_2[7] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 51
-    Info (169065): Pin GPIO_2[8] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 51
-    Info (169065): Pin GPIO_2[9] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 51
-    Info (169065): Pin GPIO_2[10] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 51
-    Info (169065): Pin GPIO_2[11] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 51
-    Info (169065): Pin GPIO_2[12] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 51
-    Info (169065): Pin gpio0ports[0] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 55
-    Info (169065): Pin gpio0ports[1] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 55
-    Info (169065): Pin gpio0ports[2] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 55
-    Info (169065): Pin gpio0ports[3] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 55
-    Info (169065): Pin gpio0ports[4] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 55
-    Info (169065): Pin gpio0ports[5] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 55
-    Info (169065): Pin gpio0ports[6] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 55
-    Info (169065): Pin gpio0ports[7] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 55
-    Info (169065): Pin gpio0ports[8] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 55
-    Info (169065): Pin gpio0ports[9] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 55
-    Info (169065): Pin gpio0ports[10] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 55
-    Info (169065): Pin gpio0ports[11] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 55
-    Info (169065): Pin gpio0ports[12] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 55
-    Info (169065): Pin gpio0ports[13] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 55
-    Info (169065): Pin gpio0ports[14] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 55
-    Info (169065): Pin gpio0ports[15] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 55
-    Info (169065): Pin gpio0ports[16] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 55
-    Info (169065): Pin gpio0ports[17] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 55
-    Info (169065): Pin gpio0ports[18] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 55
-    Info (169065): Pin gpio0ports[19] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 55
-    Info (169065): Pin gpio0ports[20] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 55
-    Info (169065): Pin gpio0ports[21] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 55
-    Info (169065): Pin gpio0ports[22] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 55
-    Info (169065): Pin gpio0ports[23] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 55
-    Info (169065): Pin gpio0ports[24] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 55
-    Info (169065): Pin gpio0ports[25] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 55
-    Info (169065): Pin gpio0ports[26] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 55
-    Info (169065): Pin gpio0ports[27] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 55
-    Info (169065): Pin gpio0ports[28] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 55
-    Info (169065): Pin gpio0ports[29] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 55
-    Info (169065): Pin gpio0ports[30] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 55
-    Info (169065): Pin gpio0ports[31] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 55
-    Info (169065): Pin gpio0ports[32] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 55
-    Info (169065): Pin gpio0ports[33] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 55
-    Info (169065): Pin gpio1ports[0] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 59
-    Info (169065): Pin gpio1ports[1] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 59
-    Info (169065): Pin gpio1ports[2] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 59
-    Info (169065): Pin gpio1ports[3] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 59
-    Info (169065): Pin gpio1ports[4] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 59
-    Info (169065): Pin gpio1ports[5] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 59
-    Info (169065): Pin gpio1ports[6] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 59
-    Info (169065): Pin gpio1ports[7] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 59
-    Info (169065): Pin gpio1ports[8] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 59
-    Info (169065): Pin gpio1ports[9] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 59
-    Info (169065): Pin gpio1ports[10] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 59
-    Info (169065): Pin gpio1ports[11] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 59
-    Info (169065): Pin gpio1ports[12] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 59
-    Info (169065): Pin gpio1ports[13] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 59
-    Info (169065): Pin gpio1ports[14] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 59
-    Info (169065): Pin gpio1ports[15] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 59
-    Info (169065): Pin gpio1ports[16] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 59
-    Info (169065): Pin gpio1ports[17] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 59
-    Info (169065): Pin gpio1ports[18] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 59
-    Info (169065): Pin gpio1ports[19] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 59
-    Info (169065): Pin gpio1ports[20] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 59
-    Info (169065): Pin gpio1ports[21] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 59
-    Info (169065): Pin gpio1ports[22] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 59
-    Info (169065): Pin gpio1ports[23] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 59
-    Info (169065): Pin gpio1ports[24] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 59
-    Info (169065): Pin gpio1ports[25] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 59
-    Info (169065): Pin gpio1ports[26] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 59
-    Info (169065): Pin gpio1ports[27] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 59
-    Info (169065): Pin gpio1ports[28] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 59
-    Info (169065): Pin gpio1ports[29] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 59
-    Info (169065): Pin gpio1ports[30] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 59
-    Info (169065): Pin gpio1ports[31] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 59
-    Info (169065): Pin gpio1ports[32] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 59
-    Info (169065): Pin gpio1ports[33] has a permanently disabled output enable File: F:/sampler/sampler.v Line: 59
-Info (144001): Generated suppressed messages file F:/sampler/sampler.fit.smsg
+    Info (169065): Pin I2C_SDAT has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 42
+    Info (169065): Pin GPIO_2[0] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 51
+    Info (169065): Pin GPIO_2[1] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 51
+    Info (169065): Pin GPIO_2[2] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 51
+    Info (169065): Pin GPIO_2[3] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 51
+    Info (169065): Pin GPIO_2[4] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 51
+    Info (169065): Pin GPIO_2[5] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 51
+    Info (169065): Pin GPIO_2[6] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 51
+    Info (169065): Pin GPIO_2[7] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 51
+    Info (169065): Pin GPIO_2[8] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 51
+    Info (169065): Pin GPIO_2[9] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 51
+    Info (169065): Pin GPIO_2[10] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 51
+    Info (169065): Pin GPIO_2[11] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 51
+    Info (169065): Pin GPIO_2[12] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 51
+    Info (169065): Pin gpio0ports[0] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169065): Pin gpio0ports[1] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169065): Pin gpio0ports[2] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169065): Pin gpio0ports[3] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169065): Pin gpio0ports[4] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169065): Pin gpio0ports[5] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169065): Pin gpio0ports[6] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169065): Pin gpio0ports[7] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169065): Pin gpio0ports[8] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169065): Pin gpio0ports[9] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169065): Pin gpio0ports[10] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169065): Pin gpio0ports[11] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169065): Pin gpio0ports[12] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169065): Pin gpio0ports[13] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169065): Pin gpio0ports[14] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169065): Pin gpio0ports[15] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169065): Pin gpio0ports[16] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169065): Pin gpio0ports[17] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169065): Pin gpio0ports[18] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169065): Pin gpio0ports[19] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169065): Pin gpio0ports[20] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169065): Pin gpio0ports[21] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169065): Pin gpio0ports[22] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169065): Pin gpio0ports[23] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169065): Pin gpio0ports[24] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169065): Pin gpio0ports[25] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169065): Pin gpio0ports[26] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169065): Pin gpio0ports[27] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169065): Pin gpio0ports[28] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169065): Pin gpio0ports[29] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169065): Pin gpio0ports[30] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169065): Pin gpio0ports[31] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169065): Pin gpio0ports[32] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169065): Pin gpio0ports[33] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 55
+    Info (169065): Pin gpio1ports[0] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169065): Pin gpio1ports[1] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169065): Pin gpio1ports[2] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169065): Pin gpio1ports[3] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169065): Pin gpio1ports[4] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169065): Pin gpio1ports[5] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169065): Pin gpio1ports[6] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169065): Pin gpio1ports[7] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169065): Pin gpio1ports[8] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169065): Pin gpio1ports[9] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169065): Pin gpio1ports[10] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169065): Pin gpio1ports[11] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169065): Pin gpio1ports[12] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169065): Pin gpio1ports[13] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169065): Pin gpio1ports[14] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169065): Pin gpio1ports[15] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169065): Pin gpio1ports[16] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169065): Pin gpio1ports[17] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169065): Pin gpio1ports[18] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169065): Pin gpio1ports[19] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169065): Pin gpio1ports[20] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169065): Pin gpio1ports[21] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169065): Pin gpio1ports[22] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169065): Pin gpio1ports[23] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169065): Pin gpio1ports[24] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169065): Pin gpio1ports[25] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169065): Pin gpio1ports[26] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169065): Pin gpio1ports[27] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169065): Pin gpio1ports[28] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169065): Pin gpio1ports[29] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169065): Pin gpio1ports[30] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169065): Pin gpio1ports[31] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169065): Pin gpio1ports[32] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+    Info (169065): Pin gpio1ports[33] has a permanently disabled output enable File: C:/Users/Ronald/Documents/sampler/sampler/sampler.v Line: 59
+Info (144001): Generated suppressed messages file C:/Users/Ronald/Documents/sampler/sampler/sampler.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 13 warnings
-    Info: Peak virtual memory: 1472 megabytes
-    Info: Processing ended: Sun Jun 25 19:30:42 2017
-    Info: Elapsed time: 00:00:27
-    Info: Total CPU time (on all processors): 00:00:24
+    Info: Peak virtual memory: 1479 megabytes
+    Info: Processing ended: Mon Jul 31 17:39:15 2017
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:16
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in F:/sampler/sampler.fit.smsg.
+The suppressed messages can be found in C:/Users/Ronald/Documents/sampler/sampler/sampler.fit.smsg.
 
 

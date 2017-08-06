@@ -2,7 +2,7 @@ set_global_assignment -entity "nios_sampler" -library "nios_sampler" -name IP_TO
 set_global_assignment -entity "nios_sampler" -library "nios_sampler" -name IP_TOOL_VERSION "17.0"
 set_global_assignment -entity "nios_sampler" -library "nios_sampler" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -library "nios_sampler" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../nios_sampler.sopcinfo"]
-set_global_assignment -entity "nios_sampler" -library "nios_sampler" -name SLD_INFO "QSYS_NAME nios_sampler HAS_SOPCINFO 1 GENERATION_ID 1498411703"
+set_global_assignment -entity "nios_sampler" -library "nios_sampler" -name SLD_INFO "QSYS_NAME nios_sampler HAS_SOPCINFO 1 GENERATION_ID 1501515421"
 set_global_assignment -library "nios_sampler" -name MISC_FILE [file join $::quartus(qip_path) "../nios_sampler.cmp"]
 set_global_assignment -library "nios_sampler" -name SLD_FILE [file join $::quartus(qip_path) "nios_sampler.regmap"]
 set_global_assignment -library "nios_sampler" -name SLD_FILE [file join $::quartus(qip_path) "nios_sampler.debuginfo"]
@@ -16,7 +16,7 @@ set_global_assignment -entity "nios_sampler" -library "nios_sampler" -name IP_CO
 set_global_assignment -entity "nios_sampler" -library "nios_sampler" -name IP_COMPONENT_REPORT_HIERARCHY "On"
 set_global_assignment -entity "nios_sampler" -library "nios_sampler" -name IP_COMPONENT_INTERNAL "Off"
 set_global_assignment -entity "nios_sampler" -library "nios_sampler" -name IP_COMPONENT_VERSION "MS4w"
-set_global_assignment -entity "nios_sampler" -library "nios_sampler" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTQ5ODQxMTcwMw==::QXV0byBHRU5FUkFUSU9OX0lE"
+set_global_assignment -entity "nios_sampler" -library "nios_sampler" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTUwMTUxNTQyMQ==::QXV0byBHRU5FUkFUSU9OX0lE"
 set_global_assignment -entity "nios_sampler" -library "nios_sampler" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::Q3ljbG9uZSBJViBF::QXV0byBERVZJQ0VfRkFNSUxZ"
 set_global_assignment -entity "nios_sampler" -library "nios_sampler" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::RVA0Q0UyMkYxN0M2::QXV0byBERVZJQ0U="
 set_global_assignment -entity "nios_sampler" -library "nios_sampler" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::Ng==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="
