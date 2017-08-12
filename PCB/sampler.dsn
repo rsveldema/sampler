@@ -21,8 +21,8 @@
       )
     )
     (boundary
-      (path pcb 0  88900 -46990  90170 -46990  90170 -140970  214630 -140970
-            214630 -46990  88900 -46990  88900 -46990)
+      (path pcb 0  120650 -77470  120650 -134620  194310 -134620  194310 -77470
+            120650 -77470  120650 -77470)
     )
     (via "Via[0-1]_600:400_um")
     (rule
@@ -34,10 +34,10 @@
   )
   (placement
     (component Capacitors_SMD:C_0805
-      (place C1 181610 -107950 front 0 (PN 0.1uF))
+      (place C1 181610 -111760 front 0 (PN 0.1uF))
       (place C2 179070 -96520 front 0 (PN 0.1uF))
       (place C3 172720 -91440 front 0 (PN 0.1uF))
-      (place C4 179070 -101600 front 0 (PN 0.1uF))
+      (place C4 179070 -105410 front 0 (PN 0.1uF))
     )
     (component Capacitors_SMD:C_0603
       (place C5 185420 -99060 front 0 (PN 10uF))

@@ -3,9 +3,9 @@
   (general
     (links 42)
     (no_connects 42)
-    (area 0 0 0 0)
+    (area 129.586667 84.325 187.453334 126.595)
     (thickness 1.6)
-    (drawings 5)
+    (drawings 4)
     (tracks 0)
     (zones 0)
     (modules 7)
@@ -42,7 +42,7 @@
     (zone_clearance 0.508)
     (zone_45_only no)
     (trace_min 0.2)
-    (segment_width 0.2)
+    (segment_width 0.1)
     (edge_width 0.1)
     (via_size 0.6)
     (via_drill 0.4)
@@ -62,7 +62,7 @@
     (pad_drill 0.6)
     (pad_to_mask_clearance 0)
     (aux_axis_origin 0 0)
-    (visible_elements FFFFFF7F)
+    (visible_elements 7FFFFFFF)
     (pcbplotparams
       (layerselection 0x00030_80000001)
       (usegerberextensions false)
@@ -154,7 +154,7 @@
   )
 
   (module Capacitors_SMD:C_0805 (layer F.Cu) (tedit 58AA8463) (tstamp 5988E382)
-    (at 181.61 107.95)
+    (at 181.61 111.76)
     (descr "Capacitor SMD 0805, reflow soldering, AVX (see smccp.pdf)")
     (tags "capacitor 0805")
     (path /5986FFEB)
@@ -262,7 +262,7 @@
   )
 
   (module Capacitors_SMD:C_0805 (layer F.Cu) (tedit 58AA8463) (tstamp 5988E394)
-    (at 179.07 101.6)
+    (at 179.07 105.41)
     (descr "Capacitor SMD 0805, reflow soldering, AVX (see smccp.pdf)")
     (tags "capacitor 0805")
     (path /59870C94)
@@ -644,10 +644,9 @@
     )
   )
 
-  (gr_line (start 90.17 46.99) (end 88.9 46.99) (angle 90) (layer Edge.Cuts) (width 0.1))
-  (gr_line (start 90.17 140.97) (end 90.17 46.99) (angle 90) (layer Edge.Cuts) (width 0.1))
-  (gr_line (start 214.63 140.97) (end 90.17 140.97) (angle 90) (layer Edge.Cuts) (width 0.1))
-  (gr_line (start 214.63 46.99) (end 214.63 140.97) (angle 90) (layer Edge.Cuts) (width 0.1))
-  (gr_line (start 88.9 46.99) (end 214.63 46.99) (angle 90) (layer Edge.Cuts) (width 0.1))
+  (gr_line (start 120.65 134.62) (end 120.65 77.47) (angle 90) (layer Edge.Cuts) (width 0.1))
+  (gr_line (start 194.31 134.62) (end 120.65 134.62) (angle 90) (layer Edge.Cuts) (width 0.1))
+  (gr_line (start 194.31 77.47) (end 194.31 134.62) (angle 90) (layer Edge.Cuts) (width 0.1))
+  (gr_line (start 120.65 77.47) (end 194.31 77.47) (angle 90) (layer Edge.Cuts) (width 0.1))
 
 )
