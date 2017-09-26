@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source C:/Users/Ronald/Documents/sampler/sampler/PCB/sampler.sch)
-    (date "08/08/2017 00:00:28")
+    (date "12/08/2017 08:37:00")
     (tool "Eeschema 4.0.6")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -23,7 +23,7 @@
       (tstamp 5986F078))
     (comp (ref J1)
       (value CONN_02X15)
-      (footprint Socket_Strips:Socket_Strip_Straight_2x15_Pitch2.54mm_SMD)
+      (footprint Pin_Headers:Pin_Header_Straight_2x15_Pitch2.54mm_SMD)
       (libsource (lib conn) (part CONN_02X15))
       (sheetpath (names /) (tstamps /))
       (tstamp 5986F0F6))
@@ -145,10 +145,10 @@
         (pin (num 29) (name P29) (type passive))
         (pin (num 30) (name P30) (type passive)))))
   (libraries
+    (library (logical adc-lib)
+      (uri adc-lib.lib))
     (library (logical device)
       (uri "C:\\Program Files\\KiCad\\share\\kicad\\library\\device.lib"))
-    (library (logical adc-lib)
-      (uri C:\Users\Ronald\Documents\sampler\sampler\PCB\adc-lib.lib))
     (library (logical conn)
       (uri "C:\\Program Files\\KiCad\\share\\kicad\\library\\conn.lib")))
   (nets
