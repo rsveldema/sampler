@@ -6635,7 +6635,6 @@ LETTER landscape</description>
 <part name="C2" library="capacitor-wima" library_urn="urn:adsk.eagle:library:116" deviceset="C" device="2,5-3" package3d_urn="urn:adsk.eagle:package:5436/1"/>
 <part name="C3" library="capacitor-wima" library_urn="urn:adsk.eagle:library:116" deviceset="C" device="2,5-3" package3d_urn="urn:adsk.eagle:package:5436/1"/>
 <part name="C4" library="capacitor-wima" library_urn="urn:adsk.eagle:library:116" deviceset="C" device="2,5-3" package3d_urn="urn:adsk.eagle:package:5436/1"/>
-<part name="GND3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="LETTER_L" device=""/>
@@ -6667,7 +6666,6 @@ LETTER landscape</description>
 <instance part="C2" gate="G$1" x="60.96" y="124.46"/>
 <instance part="C3" gate="G$1" x="53.34" y="96.52"/>
 <instance part="C4" gate="G$1" x="66.04" y="96.52"/>
-<instance part="GND3" gate="1" x="-15.24" y="73.66"/>
 <instance part="GND4" gate="1" x="66.04" y="86.36"/>
 <instance part="GND5" gate="1" x="53.34" y="86.36"/>
 <instance part="FRAME1" gate="G$1" x="-58.42" y="20.32"/>
